@@ -1,0 +1,36 @@
+test_absent_uncertain_turn_never_restarted (test_adapter.AdapterTests.test_absent_uncertain_turn_never_restarted) ... ok
+test_busy_chat_not_steered (test_adapter.AdapterTests.test_busy_chat_not_steered) ... ok
+test_changed_artifact_blocks_before_codex (test_adapter.AdapterTests.test_changed_artifact_blocks_before_codex) ... ok
+test_closed_schema_rejects_owner_override_and_duplicates (test_adapter.AdapterTests.test_closed_schema_rejects_owner_override_and_duplicates) ... ok
+test_different_workers_share_persistent_worktree_reservations (test_adapter.AdapterTests.test_different_workers_share_persistent_worktree_reservations) ... ok
+test_disconnect_before_stdio_intent_can_safely_continue_same_reservation (test_adapter.AdapterTests.test_disconnect_before_stdio_intent_can_safely_continue_same_reservation) ... ok
+test_disconnect_in_running_turn_interrupts_original (test_adapter.AdapterTests.test_disconnect_in_running_turn_interrupts_original) ... ok
+test_duplicate_mutating_rpc_reuses_operation_id (test_adapter.AdapterTests.test_duplicate_mutating_rpc_reuses_operation_id) ... ok
+test_failed_result_delivery_prevents_completed_report (test_adapter.AdapterTests.test_failed_result_delivery_prevents_completed_report) ... ok
+test_lost_codex_ack_reconciles_no_duplicate (test_adapter.AdapterTests.test_lost_codex_ack_reconciles_no_duplicate) ... ok
+test_no_installation_or_recipe_execution_interface (test_adapter.AdapterTests.test_no_installation_or_recipe_execution_interface) ... ok
+test_pump_lock_excludes_second_controller (test_adapter.AdapterTests.test_pump_lock_excludes_second_controller) ... ok
+test_registration_and_task_snapshots_match_contract (test_adapter.AdapterTests.test_registration_and_task_snapshots_match_contract) ... ok
+test_restart_preserves_thread_turn_and_completion (test_adapter.AdapterTests.test_restart_preserves_thread_turn_and_completion) ... ok
+test_revocation_interrupts_without_new_turn (test_adapter.AdapterTests.test_revocation_interrupts_without_new_turn) ... ok
+test_signature_vector_and_tamper_rejection (test_adapter.AdapterTests.test_signature_vector_and_tamper_rejection) ... ok
+test_task_wrong_target_worktree_chat_and_digest (test_adapter.AdapterTests.test_task_wrong_target_worktree_chat_and_digest) ... ok
+test_two_tasks_sequential_actual_adapter (test_adapter.AdapterTests.test_two_tasks_sequential_actual_adapter) ... ok
+test_unknown_tests_cannot_be_marked_passed (test_adapter.AdapterTests.test_unknown_tests_cannot_be_marked_passed) ... ok
+test_completion_flag_required (test_wow.WoWTests.test_completion_flag_required) ... ok
+test_delayed_validation_consumes_budget_from_request_start (test_wow.WoWTests.test_delayed_validation_consumes_budget_from_request_start) ... ok
+test_edition_required_and_all_three_supported (test_wow.WoWTests.test_edition_required_and_all_three_supported) ... ok
+test_follow_on_disabled (test_wow.WoWTests.test_follow_on_disabled) ... ok
+test_foreign_fence_validation_rejected (test_wow.WoWTests.test_foreign_fence_validation_rejected) ... ok
+test_hash_verified_after_restart_and_before_completed (test_wow.WoWTests.test_hash_verified_after_restart_and_before_completed) ... ok
+test_no_tool_calls_accepted_in_result (test_wow.WoWTests.test_no_tool_calls_accepted_in_result) ... ok
+test_overlong_deadline_capped_at_fifteen_seconds (test_wow.WoWTests.test_overlong_deadline_capped_at_fifteen_seconds) ... ok
+test_replayed_or_revalidation_required_denied (test_wow.WoWTests.test_replayed_or_revalidation_required_denied) ... ok
+test_review_only_profile_cannot_expand (test_wow.WoWTests.test_review_only_profile_cannot_expand) ... ok
+test_transient_terminal_history_not_completed_while_live (test_wow.WoWTests.test_transient_terminal_history_not_completed_while_live) ... ok
+test_wall_clock_jump_does_not_extend_authority (test_wow.WoWTests.test_wall_clock_jump_does_not_extend_authority) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 3.671s
+
+OK

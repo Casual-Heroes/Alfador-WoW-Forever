@@ -1,0 +1,22 @@
+{
+  "source": "G:\\OneDrive\\MeldTools\\.worktrees\\alfador-desktop-dispatcher\\tools\\questlog-worker",
+  "files_sha256_before_adaptation": {
+    "controller.py": "899dfe8b9b5320de1fac23f6959ca5d5ae51e803d456d1859c515e84c6612b69",
+    "codex_rpc.py": "151724b3c2e3878117bb59441b8e55f090ba5346ce5abb7495904cc96e558cfd",
+    "journal.py": "cd9614a470aaf914d061f00c9bf0761c51f73c1398c6257c51f4da42c25535ba",
+    "protocol.py": "0ae502ecfe1a562d0c0a5eb30dbb23534a6db9ffcb114e1c81d07f489a6c6f67",
+    "transport.py": "5d2921ae8d7ad1572ea3439c73087afee7d71ffcb2ebf114e6ddb82d9daf37ac",
+    "secure_identity.py": "589b3cf9c9cfe6100c2f5c6ef2f69f1cb108f968c7b1af6ecfb6aac965624513",
+    "publish_result.py": "63b9ea60bb37f5f3c62470e9fc04ecd529bdc814df20fe851106fe938143b314",
+    "test_adapter.py": "81e421e2cb16e78eaedd914a69babbbb53e3e757a7678123c6374f291a23eb97",
+    "dispatcher.openapi.json": "09f0a4b1160845e321caadc4937726809c38f104b515bc98c8d3f2d50e62d40b",
+    "signature-vector.json": "60849458aca5781b5b09ac032f854a246ea5155bff4c3c90400e7dd7e2c3f961"
+  },
+  "adaptations": [
+    "Dedicated WoW identity and local state; no private state copied",
+    "Explicit Forever/Retail/Shared scope; review-only; no tools",
+    "Request-start monotonic validation and immediate pre-send guard",
+    "Bounded data-only artifacts; actual result delivery before completion",
+    "Completion acceptance flag required; no privileged follow-on"
+  ]
+}

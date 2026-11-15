@@ -1,0 +1,28 @@
+Edition: Retail
+Harmless read-only source summary.
+Repository: Casual-Heroes/Alfador-WoW-Retail
+Status: staged research, no game installation or live Core transport.
+Never assume support in the other edition.
+
+# Alfador WoW Retail
+
+Secondary development target, after Forever. Addon source belongs in `addons/`.
+
+`addons/AlfadorProbe` contains the initial internal read-only probe. Its TOC uses
+interface `120100`, based on the November 13 local Retail build inspection
+(`12.1.0.69299`). It has not been installed or executed in game. Recheck the
+client build before testing. No damage data, chat, gameplay actions or external
+transport are implemented.
+
+Manual acceptance and limitations are in
+`../docs/research/2026-11-13-capability-discovery.md`. API presence and registration
+success are discovery evidence, not completed feature acceptance.
+
+## Dedicated repository (2026-11-15)
+
+This edition is a separate private repository: Casual-Heroes/Alfador-WoW-Retail.
+Read this repository's AGENTS.md and docs/STATUS.md. Shared instructions and docs
+were preserved as a dated bootstrap snapshot from the parent project; the parent
+files remain intact. Changes to either snapshot require explicit edition scope.
+The one WoW dispatcher serializes Forever, Retail and Shared assignments. It has
+review-only authority, with no privileged recipes or background installation.

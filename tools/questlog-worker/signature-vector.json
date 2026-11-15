@@ -1,0 +1,19 @@
+{
+  "body_sha256": "3a842bd8096bbef350b49ecd9d8975fcc16cc2e4399be4c077ee36f5b9252111",
+  "body_utf8": "{\"operation\":\"poll\",\"operation_id\":\"00000000-0000-4000-8000-000000000003\",\"payload\":{},\"version\":\"questlog.dispatcher.v1\"}",
+  "message_utf8": "questlog.dispatcher.worker.v1\nPOST\n/api/v1/questlog-dispatcher/worker/\n00000000-0000-4000-8000-000000000001\n00000000-0000-4000-8000-000000000002\n1794700800\n3a842bd8096bbef350b49ecd9d8975fcc16cc2e4399be4c077ee36f5b9252111",
+  "negative_cases": [
+    "change body bytes",
+    "change worker ID",
+    "change request ID",
+    "append signed newline",
+    "wrong public key"
+  ],
+  "offline_fixture_only": true,
+  "public_key": "199eb6590c9cb65ac5c23669f0888d6092dae84f52981860010ea26e30218945",
+  "request_id": "00000000-0000-4000-8000-000000000002",
+  "schema": "questlog.dispatcher.signature-vector.v1",
+  "signature_base64": "tSqE8HXJ+4Xg8x0+F/E+P0jy8+Mtf+4hly4/xRPDQv2hjjBq0Xrjm22CGNCSluTV/qXgUsbM/58ZrMtofd0YBg==",
+  "timestamp": "1794700800",
+  "worker_id": "00000000-0000-4000-8000-000000000001"
+}
