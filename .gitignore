@@ -1,0 +1,11 @@
+WTF/
+SavedVariables/
+.env
+.env.*
+!.env.example
+*.log
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+worker-results/

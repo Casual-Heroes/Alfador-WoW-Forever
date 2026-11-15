@@ -1,0 +1,20 @@
+# Alfador WoW Forever
+
+Primary development target. Addon source belongs in `addons/`.
+
+No Forever addon or compatibility claim exists yet. The November 13 inspection
+found only Retail in the known WoW installation. Establish Forever's build,
+interface number and supported APIs before creating its addon manifest.
+
+Resume with `../AGENTS.md`, `../docs/STATUS.md` and the dated capability research.
+Keep Forever test evidence separate from Retail; shared APIs are not proof of
+feature availability. Never substitute a Retail result for Forever acceptance.
+
+## Dedicated repository (2026-11-15)
+
+This edition is a separate private repository: Casual-Heroes/Alfador-WoW-Forever.
+Read this repository's AGENTS.md and docs/STATUS.md. Shared instructions and docs
+were preserved as a dated bootstrap snapshot from the parent project; the parent
+files remain intact. Changes to either snapshot require explicit edition scope.
+The one WoW dispatcher serializes Forever, Retail and Shared assignments. It has
+review-only authority, with no privileged recipes or background installation.

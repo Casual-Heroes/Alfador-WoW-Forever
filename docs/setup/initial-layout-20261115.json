@@ -1,0 +1,55 @@
+{
+    "preserved_local_environment":  "wow-prj",
+    "initial_git_roots":  [
+
+                          ],
+    "edition_files_previously_untracked":  true,
+    "files":  [
+                  {
+                      "sha256":  "a7cbb485938888cfa172625f51b93f06aab4dcff2722a85c60950a1942e3b361",
+                      "path":  "G:\\Projects\\Alfador-WoW\\Forever\\README.md"
+                  },
+                  {
+                      "sha256":  "8daaf0403369201faa0d624c4c4d14fe094d335394dfabab834570db4be69a01",
+                      "path":  "G:\\Projects\\Alfador-WoW\\Retail\\README.md"
+                  },
+                  {
+                      "sha256":  "9f82e0e17df60b937281cb6be8a06523a77db4d9bb42f96936952165c0601b02",
+                      "path":  "G:\\Projects\\Alfador-WoW\\Retail\\addons\\AlfadorProbe\\AlfadorProbe.toc"
+                  },
+                  {
+                      "sha256":  "7dfd4f6aed75f4d5797ec42ac9ba5ace8911eb0d25a008834a0f2e38d99c8186",
+                      "path":  "G:\\Projects\\Alfador-WoW\\Retail\\addons\\AlfadorProbe\\Probe.lua"
+                  },
+                  {
+                      "sha256":  "343c6dd5cf28c154676b63002ba73414c3a86bd5b6eb0c9586d5264bb73fbbb5",
+                      "path":  "G:\\Projects\\Alfador-WoW\\AGENTS.md"
+                  },
+                  {
+                      "sha256":  "83abc315b03277d89f50e71cc6ca47bf6ae3b1b9f3c8e95b1d9e34f8b52de48d",
+                      "path":  "G:\\Projects\\Alfador-WoW\\README.md"
+                  },
+                  {
+                      "sha256":  "e662ab6fbf7500af7543cbb47cdc766165db7e6c6eb24d1c900c94b4d2a1f874",
+                      "path":  "G:\\Projects\\Alfador-WoW\\.gitignore"
+                  },
+                  {
+                      "sha256":  "ea47b315bb082c6cfc63a1407b26923ee6242ae09151b52948da12585048926e",
+                      "path":  "G:\\Projects\\Alfador-WoW\\docs\\STATUS.md"
+                  },
+                  {
+                      "sha256":  "9ce5f4a06d3d5184739b5778740cf66b64a71dd093d76832ec097e733f2f5d42",
+                      "path":  "G:\\Projects\\Alfador-WoW\\docs\\adr\\0001-server-authoritative-brain.md"
+                  },
+                  {
+                      "sha256":  "79ab1c9f11b72ec31e968aee14c38420982e3cfb00ae8ca5d1b16525301592a5",
+                      "path":  "G:\\Projects\\Alfador-WoW\\docs\\research\\2026-11-13-capability-discovery.md"
+                  }
+              ],
+    "date":  "2026-11-15",
+    "shared_root":  "G:\\Projects\\Alfador-WoW",
+    "untouched_desktop_dirty":  [
+                                    "docs/tracker-integration-plan.md",
+                                    "wow_addon/"
+                                ]
+}
