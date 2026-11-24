@@ -13,7 +13,6 @@ worker-results/
 builds/
 local-evidence/
 .core-work/
-research/
 
 # Local exchange records, installation evidence, and retired Core overlays.
 /handoffs/
