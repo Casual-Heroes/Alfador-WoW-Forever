@@ -1,0 +1,315 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "event",
+        "session",
+        "position",
+        "ready_at_unix_local",
+        "monotonic_elapsed_seconds",
+        "poll_interval_seconds",
+        "monotonic_resolution_seconds",
+        "native_file_share",
+        "live_transport_verified"
+      ],
+      "properties": {
+        "schema": {
+          "const": "alfador.wowf.transport-marker-status.source2"
+        },
+        "event": {
+          "const": "ready"
+        },
+        "session": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{32}$"
+        },
+        "position": {
+          "const": "end-of-file-before-send"
+        },
+        "ready_at_unix_local": {
+          "type": "number",
+          "minimum": 0
+        },
+        "monotonic_elapsed_seconds": {
+          "const": 0
+        },
+        "poll_interval_seconds": {
+          "const": 0.25
+        },
+        "monotonic_resolution_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "native_file_share": {
+          "enum": [
+            "read-write-delete",
+            "not-windows"
+          ]
+        },
+        "live_transport_verified": {
+          "const": false
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "event",
+        "sequence",
+        "sent_at_unix_claimed",
+        "received_at_unix_local",
+        "monotonic_elapsed_seconds",
+        "poll_id",
+        "batch_id",
+        "batch_matching_markers",
+        "duplicate",
+        "out_of_order",
+        "observed_clock_difference_seconds",
+        "clock_skew_measured",
+        "payload_kind",
+        "live_transport_verified",
+        "game_attested"
+      ],
+      "properties": {
+        "schema": {
+          "const": "alfador.wowf.transport-marker-receipt.source2"
+        },
+        "event": {
+          "enum": [
+            "marker-observed",
+            "marker-duplicate"
+          ]
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "sent_at_unix_claimed": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9999999999
+        },
+        "received_at_unix_local": {
+          "type": "number",
+          "minimum": 0
+        },
+        "monotonic_elapsed_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "poll_id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000000
+        },
+        "batch_id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000000
+        },
+        "batch_matching_markers": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2048
+        },
+        "duplicate": {
+          "type": "boolean"
+        },
+        "out_of_order": {
+          "type": "boolean"
+        },
+        "observed_clock_difference_seconds": {
+          "type": "number"
+        },
+        "clock_skew_measured": {
+          "const": false
+        },
+        "payload_kind": {
+          "const": "test-marker-not-gameplay"
+        },
+        "live_transport_verified": {
+          "const": false
+        },
+        "game_attested": {
+          "const": false
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "event",
+        "ready",
+        "expected_sequences",
+        "received_sequences",
+        "missing_sequences",
+        "unique_marker_receipts",
+        "duplicates",
+        "out_of_order",
+        "multimarker_poll_batches",
+        "poll_interval_seconds",
+        "terminal_reason",
+        "observation_window_elapsed_seconds",
+        "live_transport_verified",
+        "clock_skew_measured"
+      ],
+      "properties": {
+        "schema": {
+          "const": "alfador.wowf.transport-marker-status.source2"
+        },
+        "event": {
+          "const": "test-ended"
+        },
+        "ready": {
+          "type": "boolean"
+        },
+        "expected_sequences": {
+          "const": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        "received_sequences": {
+          "type": "array",
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          }
+        },
+        "missing_sequences": {
+          "type": "array",
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          }
+        },
+        "unique_marker_receipts": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8
+        },
+        "duplicates": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000000
+        },
+        "out_of_order": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8
+        },
+        "multimarker_poll_batches": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000000
+        },
+        "poll_interval_seconds": {
+          "const": 0.25
+        },
+        "terminal_reason": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "enum": [
+                "source-unavailable",
+                "source-replaced-or-truncated",
+                "read-budget-exceeded",
+                "source-read-failed",
+                "line-budget-exceeded",
+                "reader-measurement-failed"
+              ]
+            }
+          ]
+        },
+        "observation_window_elapsed_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "live_transport_verified": {
+          "const": false
+        },
+        "clock_skew_measured": {
+          "const": false
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event",
+        "reason",
+        "os_error_code",
+        "live_transport_verified"
+      ],
+      "properties": {
+        "event": {
+          "const": "reader-not-ready"
+        },
+        "reason": {
+          "const": "source-unavailable-or-invalid"
+        },
+        "os_error_code": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1000000
+            }
+          ]
+        },
+        "live_transport_verified": {
+          "const": false
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event",
+        "live_transport_verified"
+      ],
+      "properties": {
+        "event": {
+          "enum": [
+            "source-unavailable",
+            "source-replaced-or-truncated",
+            "read-budget-exceeded",
+            "source-read-failed",
+            "line-budget-exceeded"
+          ]
+        },
+        "live_transport_verified": {
+          "const": false
+        }
+      }
+    }
+  ]
+}

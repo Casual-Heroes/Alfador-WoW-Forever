@@ -1,0 +1,85 @@
+{
+  "schema": "alfador.wowf.conversation-acceptance.source.v1",
+  "status": "design_fixtures_not_executed",
+  "authority": "Core semantic admission and existing actor/source guards",
+  "source_sha256": "995bbb73b05f194a4e1d2e9bc7daec3481c071d19e2b38b0772e4995fed2dc37",
+  "cases": [
+    {
+      "id": "area_followup",
+      "context": "Recent conversation explicitly discusses Dun Morogh; active game unknown.",
+      "question": "What else could I do around here?",
+      "expected": "Use bounded Dun Morogh public catalog with source/coverage qualification; do not claim user is there or eligible.",
+      "forbidden": "Require a repeated game/zone name or keyword trigger."
+    },
+    {
+      "id": "named_quest_followup",
+      "context": "Recent turn names The Stolen Journal.",
+      "question": "What comes after that?",
+      "expected": "Resolve recent quest referent; use directed source-supported successor if available, otherwise state uncertainty.",
+      "forbidden": "Infer story order from same-chain membership or chain length."
+    },
+    {
+      "id": "shared_journal_overlap",
+      "context": "Shared historical journal and scoped public candidate set available.",
+      "question": "Which of those have I already picked up?",
+      "expected": "Correlate validated internal IDs to same actor/snapshot and catalog release, qualify capture age.",
+      "forbidden": "Use title similarity alone, infer enrollment from absent title, or claim snapshot is current."
+    },
+    {
+      "id": "closest_known",
+      "context": "Position and source points have a verified common coordinate space.",
+      "question": "What's closest?",
+      "expected": "Compare only compatible points, name pickup/turnin target and supported straight-line unit.",
+      "forbidden": "Convert straight-line map distance to travel ETA or best route."
+    },
+    {
+      "id": "closest_unknown",
+      "context": "No compatible verified player position.",
+      "question": "What's closest?",
+      "expected": "Offer useful sourced pickup/location context, or ask one short useful clarification; distance stays unknown.",
+      "forbidden": "Invent position/transform or block ordinary conversation entirely."
+    },
+    {
+      "id": "explicit_game_override",
+      "context": "Previous topic is Dun Morogh; imported WoW journal still exists.",
+      "question": "In FFXIV, what should I do next?",
+      "expected": "Switch to explicit FFXIV topic using existing Core semantics and applicable evidence.",
+      "forbidden": "Carry WoW private/public evidence into other game."
+    },
+    {
+      "id": "withdrawal_with_public_context",
+      "context": "User withdraws observation sharing; Dun Morogh remains explicit public topic.",
+      "question": "What other quests are there?",
+      "expected": "Private snapshot unavailable; valid public catalog may still support a qualified answer under its independent authority.",
+      "forbidden": "Reuse withdrawn private facts or require private sharing for every public conversation."
+    },
+    {
+      "id": "actor_or_snapshot_change",
+      "context": "Actor/account switched, snapshot replaced/expired/withdrawn, or source release changed during answer.",
+      "question": "Which of those are mine?",
+      "expected": "Invalidate pending evidence-dependent text/audio; reauthorize and resolve against appropriate current context or explain missing evidence.",
+      "forbidden": "Deliver old actor facts or let chat history restore revoked evidence."
+    },
+    {
+      "id": "clear_topic_change",
+      "context": "Previous topic is a WoW zone.",
+      "question": "Help me write an email to my landlord.",
+      "expected": "Follow new non-game topic without unnecessary catalog retrieval.",
+      "forbidden": "Keep game routing sticky after clear topic change."
+    },
+    {
+      "id": "grind_question_sharing_on",
+      "context": "Recent Dun Morogh conversation; sharing on; verified grinding yields/location and route estimates absent.",
+      "question": "Where is the best grind spot here?",
+      "expected": "Respond to grinding goal with relevant qualified public context or explain missing evidence and ask one useful clarification. Sharing off never reuses private facts.",
+      "forbidden": "Return an unrelated quest list, invent a best spot or XP/hour, require private sharing for ordinary public conversation, or add a phrase/regex/client intent router."
+    },
+    {
+      "id": "grind_question_sharing_off",
+      "context": "Recent Dun Morogh conversation; sharing off; verified grinding yields/location and route estimates absent.",
+      "question": "Where is the best grind spot here?",
+      "expected": "Respond to grinding goal with relevant qualified public context or explain missing evidence and ask one useful clarification. Sharing off never reuses private facts.",
+      "forbidden": "Return an unrelated quest list, invent a best spot or XP/hour, require private sharing for ordinary public conversation, or add a phrase/regex/client intent router."
+    }
+  ]
+}

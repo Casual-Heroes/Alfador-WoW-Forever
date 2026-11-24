@@ -1,0 +1,22 @@
+﻿{
+    "schema":  "alfador.wowf.guide.draft1",
+    "title":  "Dun Morogh - The Stolen Journal",
+    "game":  "wow-forever",
+    "steps":  [
+                  {
+                      "instruction":  "Pick up The Stolen Journal if it is offered.",
+                      "questId":  218,
+                      "advanceWhen":  "quest-accepted-or-later"
+                  },
+                  {
+                      "instruction":  "Recover the journal. Follow the objective in your quest log.",
+                      "questId":  218,
+                      "advanceWhen":  "objectives-complete-or-turned-in"
+                  },
+                  {
+                      "instruction":  "Turn in The Stolen Journal.",
+                      "questId":  218,
+                      "advanceWhen":  "quest-turned-in"
+                  }
+              ]
+}

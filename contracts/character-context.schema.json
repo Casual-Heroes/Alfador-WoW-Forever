@@ -1,0 +1,780 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Forever character context proposal (local draft; no Core transport)",
+  "description": "Historical observation envelope. Schema validation establishes structure only. Unknown capture time, partial data, and source provenance must remain visible.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "alfador.wow.forever.character-context.draft1"
+    },
+    "game": {
+      "const": "wow-forever"
+    },
+    "revision": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "character": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "subject": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "region": {
+          "enum": [
+            "us",
+            "eu",
+            "kr",
+            "tw",
+            "cn",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "subject",
+        "region"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "enum": [
+            "wow-addon-api",
+            "blizzard-profile-api"
+          ]
+        },
+        "capturedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "retrievedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "freshness": {
+          "const": "historical"
+        },
+        "sourceRevision": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        }
+      },
+      "required": [
+        "source",
+        "capturedAt",
+        "retrievedAt",
+        "freshness",
+        "sourceRevision"
+      ]
+    },
+    "build": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "observed"
+                },
+                "value": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 512
+                }
+              },
+              "required": [
+                "status",
+                "value"
+              ]
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "enum": [
+                    "unavailable",
+                    "restricted",
+                    "call-failed",
+                    "api-unavailable"
+                  ]
+                }
+              },
+              "required": [
+                "status"
+              ]
+            }
+          ]
+        },
+        "number": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "observed"
+                },
+                "value": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 512
+                }
+              },
+              "required": [
+                "status",
+                "value"
+              ]
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "enum": [
+                    "unavailable",
+                    "restricted",
+                    "call-failed",
+                    "api-unavailable"
+                  ]
+                }
+              },
+              "required": [
+                "status"
+              ]
+            }
+          ]
+        },
+        "interface": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "observed"
+                },
+                "value": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "required": [
+                "status",
+                "value"
+              ]
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "enum": [
+                    "unavailable",
+                    "restricted",
+                    "call-failed",
+                    "api-unavailable"
+                  ]
+                }
+              },
+              "required": [
+                "status"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "version",
+        "number",
+        "interface"
+      ]
+    },
+    "zone": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "enum": [
+                "observed",
+                "partial"
+              ]
+            },
+            "data": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "mapID": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "status": {
+                          "const": "observed"
+                        },
+                        "value": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "status",
+                        "value"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "status": {
+                          "enum": [
+                            "unavailable",
+                            "restricted",
+                            "call-failed",
+                            "api-unavailable"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "status"
+                      ]
+                    }
+                  ]
+                },
+                "name": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "status": {
+                          "const": "observed"
+                        },
+                        "value": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 512
+                        }
+                      },
+                      "required": [
+                        "status",
+                        "value"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "status": {
+                          "enum": [
+                            "unavailable",
+                            "restricted",
+                            "call-failed",
+                            "api-unavailable"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "status"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "mapID",
+                "name"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "data"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "enum": [
+                "unavailable",
+                "restricted",
+                "call-failed",
+                "api-unavailable"
+              ]
+            }
+          },
+          "required": [
+            "status"
+          ]
+        }
+      ]
+    },
+    "summary": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "enum": [
+                "observed",
+                "partial"
+              ]
+            },
+            "data": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "status": {
+                          "const": "observed"
+                        },
+                        "value": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 512
+                        }
+                      },
+                      "required": [
+                        "status",
+                        "value"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "status": {
+                          "enum": [
+                            "unavailable",
+                            "restricted",
+                            "call-failed",
+                            "api-unavailable"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "status"
+                      ]
+                    }
+                  ]
+                },
+                "class": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "status": {
+                          "const": "observed"
+                        },
+                        "value": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 512
+                        }
+                      },
+                      "required": [
+                        "status",
+                        "value"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "status": {
+                          "enum": [
+                            "unavailable",
+                            "restricted",
+                            "call-failed",
+                            "api-unavailable"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "status"
+                      ]
+                    }
+                  ]
+                },
+                "level": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "status": {
+                          "const": "observed"
+                        },
+                        "value": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "status",
+                        "value"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "status": {
+                          "enum": [
+                            "unavailable",
+                            "restricted",
+                            "call-failed",
+                            "api-unavailable"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "status"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "class",
+                "level"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "data"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "enum": [
+                "unavailable",
+                "restricted",
+                "call-failed",
+                "api-unavailable"
+              ]
+            }
+          },
+          "required": [
+            "status"
+          ]
+        }
+      ]
+    },
+    "talents": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "enum": [
+                "observed",
+                "partial"
+              ]
+            },
+            "data": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "configuration": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "status": {
+                          "const": "observed"
+                        },
+                        "value": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 512
+                        }
+                      },
+                      "required": [
+                        "status",
+                        "value"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "status": {
+                          "enum": [
+                            "unavailable",
+                            "restricted",
+                            "call-failed",
+                            "api-unavailable"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "status"
+                      ]
+                    }
+                  ]
+                },
+                "selected": {
+                  "type": "array",
+                  "maxItems": 512,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "rank": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 100
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "rank"
+                    ]
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "configuration",
+                "selected"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "data"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "enum": [
+                "unavailable",
+                "restricted",
+                "call-failed",
+                "api-unavailable"
+              ]
+            }
+          },
+          "required": [
+            "status"
+          ]
+        }
+      ]
+    },
+    "equipment": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "enum": [
+                "observed",
+                "partial"
+              ]
+            },
+            "data": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "slots": {
+                  "type": "array",
+                  "maxItems": 19,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "slot": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 19
+                      },
+                      "item": {
+                        "oneOf": [
+                          {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "status": {
+                                "const": "observed"
+                              },
+                              "value": {
+                                "type": "integer",
+                                "minimum": 1
+                              }
+                            },
+                            "required": [
+                              "status",
+                              "value"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "status": {
+                                "enum": [
+                                  "unavailable",
+                                  "restricted",
+                                  "call-failed",
+                                  "api-unavailable"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "status"
+                            ]
+                          }
+                        ]
+                      },
+                      "itemLink": {
+                        "oneOf": [
+                          {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "status": {
+                                "const": "observed"
+                              },
+                              "value": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 512
+                              }
+                            },
+                            "required": [
+                              "status",
+                              "value"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "status": {
+                                "enum": [
+                                  "unavailable",
+                                  "restricted",
+                                  "call-failed",
+                                  "api-unavailable"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "status"
+                            ]
+                          }
+                        ]
+                      },
+                      "statsStatus": {
+                        "enum": [
+                          "unknown",
+                          "partial",
+                          "available"
+                        ]
+                      },
+                      "effectsStatus": {
+                        "enum": [
+                          "unknown",
+                          "partial",
+                          "available"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "slot",
+                      "item",
+                      "itemLink",
+                      "statsStatus",
+                      "effectsStatus"
+                    ]
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "slots"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "data"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "enum": [
+                "unavailable",
+                "restricted",
+                "call-failed",
+                "api-unavailable"
+              ]
+            }
+          },
+          "required": [
+            "status"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema",
+    "game",
+    "revision",
+    "character",
+    "provenance",
+    "build",
+    "zone",
+    "summary",
+    "talents",
+    "equipment"
+  ]
+}

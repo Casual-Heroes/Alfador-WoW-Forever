@@ -1,0 +1,44 @@
+{
+  "commit": "3d8abb1da73acd38e412e24fb3f99454a6392346",
+  "source": "Blizzard generated API docs mirrored by Gethe; not native client/policy acceptance",
+  "inventory_files_screened": 643,
+  "tree_sha256": "ed5f6e75ff122f6dd2a6a63cf0832f1bbf663277f86857ab64ad2fb4544b888a",
+  "modules": [
+    {
+      "file": "AddOnsDocumentation.lua",
+      "sha256": "8535c5ab5e2a2a4f2ad9e14a355a619d4e12fa2b975e28bda01da6eb6580db75",
+      "url": "https://raw.githubusercontent.com/Gethe/wow-ui-source/3d8abb1da73acd38e412e24fb3f99454a6392346/Interface/AddOns/Blizzard_APIDocumentationGenerated/AddOnsDocumentation.lua"
+    },
+    {
+      "file": "ChatInfoDocumentation.lua",
+      "sha256": "996cf3c4956d7d79716c082fa7bccf06e008fd191f108c85546f9fdec66e1a73",
+      "url": "https://raw.githubusercontent.com/Gethe/wow-ui-source/3d8abb1da73acd38e412e24fb3f99454a6392346/Interface/AddOns/Blizzard_APIDocumentationGenerated/ChatInfoDocumentation.lua"
+    },
+    {
+      "file": "ExternalEventURLDocumentation.lua",
+      "sha256": "b19c7e3dc159201016ed3ee766bfe9042ef4ed20ef6d694d77824d3d9f4e0c81",
+      "url": "https://raw.githubusercontent.com/Gethe/wow-ui-source/3d8abb1da73acd38e412e24fb3f99454a6392346/Interface/AddOns/Blizzard_APIDocumentationGenerated/ExternalEventURLDocumentation.lua"
+    },
+    {
+      "file": "EventUtilsDocumentation.lua",
+      "sha256": "628b8f5f2475ef4d0981580cfe7c321450aaf4b125c6489ba665389f9b98f41d",
+      "url": "https://raw.githubusercontent.com/Gethe/wow-ui-source/3d8abb1da73acd38e412e24fb3f99454a6392346/Interface/AddOns/Blizzard_APIDocumentationGenerated/EventUtilsDocumentation.lua"
+    },
+    {
+      "file": "SystemDocumentation.lua",
+      "sha256": "33e82b8b399070755ba9cb1f5954271f986c5f1eb1d80a3e1b7a295536af10c9",
+      "url": "https://raw.githubusercontent.com/Gethe/wow-ui-source/3d8abb1da73acd38e412e24fb3f99454a6392346/Interface/AddOns/Blizzard_APIDocumentationGenerated/SystemDocumentation.lua"
+    }
+  ],
+  "actual_client_tested": false,
+  "live_link_found": false,
+  "candidate": "logged self addon messages; native flush and policy feasibility unverified",
+  "source04_comparison": {
+    "url": "https://www.curseforge.com/wow/addons/campkeeper/files/9129067",
+    "kind": "author-reported native observations",
+    "build": "70334",
+    "date": "2026-10-10",
+    "limit": "older build, not 71037 or production policy acceptance",
+    "finding": "getter true reported alongside working messages; Source03 self-whisper never attempted"
+  }
+}

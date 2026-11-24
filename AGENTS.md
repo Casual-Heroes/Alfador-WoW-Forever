@@ -18,6 +18,12 @@ present output and execute narrowly typed capabilities. Submit transcripts
 without interpreting assistant intent. Wake aliases, command phrases, mode rules,
 authorization and command settings belong exclusively to Core.
 
+Core game-specific work belongs in each game's own folder under
+`alphador_core/gaming_modules/`. Forever uses `wowf/`, alongside `ffxiv/`;
+do not put WoW behavior into FFXIV. Shared Core authorization/routing/dialogue
+remain shared infrastructure, not duplicated game brains. Retail support must
+be scoped independently when introduced.
+
 Device-local adapters execute only explicit allowlisted typed Core actions.
 Never add generic voice-to-command, model-to-command, shell, HTTP or Meld API
 execution surfaces. Meld loopback remains behind MELD_RECORD_CLIP unless a

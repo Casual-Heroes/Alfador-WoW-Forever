@@ -1,0 +1,441 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "evidenceClass",
+    "samples"
+  ],
+  "properties": {
+    "schema": {
+      "const": "alfador.wowf.zone-probe.evidence.draft1"
+    },
+    "evidenceClass": {
+      "const": "local-only-not-core-delivered"
+    },
+    "samples": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "schema",
+          "game",
+          "expectedClient",
+          "observedClient",
+          "buildCheck",
+          "boundary",
+          "sequence",
+          "state",
+          "reason",
+          "capturedAtUnix",
+          "sampleEndUnix",
+          "sampling",
+          "fields",
+          "transport"
+        ],
+        "properties": {
+          "schema": {
+            "const": "alfador.wowf.zone-probe.sample.draft1"
+          },
+          "game": {
+            "const": "wow-forever"
+          },
+          "expectedClient": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "version",
+              "build",
+              "interface"
+            ],
+            "properties": {
+              "version": {
+                "const": "1.60.1"
+              },
+              "build": {
+                "const": "70959"
+              },
+              "interface": {
+                "const": 16001
+              }
+            }
+          },
+          "observedClient": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "version",
+              "build",
+              "interface"
+            ],
+            "properties": {
+              "version": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status",
+                      "value"
+                    ],
+                    "properties": {
+                      "status": {
+                        "const": "observed"
+                      },
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 128
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status"
+                    ],
+                    "properties": {
+                      "status": {
+                        "const": "unavailable"
+                      }
+                    }
+                  }
+                ]
+              },
+              "build": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status",
+                      "value"
+                    ],
+                    "properties": {
+                      "status": {
+                        "const": "observed"
+                      },
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 128
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status"
+                    ],
+                    "properties": {
+                      "status": {
+                        "const": "unavailable"
+                      }
+                    }
+                  }
+                ]
+              },
+              "interface": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status",
+                      "value"
+                    ],
+                    "properties": {
+                      "status": {
+                        "const": "observed"
+                      },
+                      "value": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 999999
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status"
+                    ],
+                    "properties": {
+                      "status": {
+                        "const": "unavailable"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "buildCheck": {
+            "enum": [
+              "matched-at-sample",
+              "unavailable-or-mismatch"
+            ]
+          },
+          "boundary": {
+            "type": "string",
+            "minLength": 32,
+            "maxLength": 32
+          },
+          "sequence": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9007199254740991
+          },
+          "state": {
+            "enum": [
+              "in_world",
+              "unavailable"
+            ]
+          },
+          "reason": {
+            "enum": [
+              "sampled",
+              "startup-awaiting-world-event",
+              "entering-world-awaiting-read",
+              "not-in-world",
+              "leaving-world",
+              "logout",
+              "zone-transition-awaiting-read",
+              "build-unavailable-or-mismatch",
+              "combat-or-safety-unavailable",
+              "player-unavailable",
+              "sample-time-unavailable-or-changed",
+              "sample-unavailable-or-changed"
+            ]
+          },
+          "capturedAtUnix": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "value"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "observed"
+                  },
+                  "value": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 9999999999
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "unavailable"
+                  }
+                }
+              }
+            ]
+          },
+          "sampleEndUnix": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "value"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "observed"
+                  },
+                  "value": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 9999999999
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "unavailable"
+                  }
+                }
+              }
+            ]
+          },
+          "sampling": {
+            "const": "sequential-nonatomic-before-after-guards"
+          },
+          "fields": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "inWorld",
+              "mapId",
+              "zoneName",
+              "level"
+            ],
+            "properties": {
+              "inWorld": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status",
+                      "value"
+                    ],
+                    "properties": {
+                      "status": {
+                        "const": "observed"
+                      },
+                      "value": {
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status"
+                    ],
+                    "properties": {
+                      "status": {
+                        "const": "unavailable"
+                      }
+                    }
+                  }
+                ]
+              },
+              "mapId": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status",
+                      "value"
+                    ],
+                    "properties": {
+                      "status": {
+                        "const": "observed"
+                      },
+                      "value": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 10000000
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status"
+                    ],
+                    "properties": {
+                      "status": {
+                        "const": "unavailable"
+                      }
+                    }
+                  }
+                ]
+              },
+              "zoneName": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status",
+                      "value"
+                    ],
+                    "properties": {
+                      "status": {
+                        "const": "observed"
+                      },
+                      "value": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 128
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status"
+                    ],
+                    "properties": {
+                      "status": {
+                        "const": "unavailable"
+                      }
+                    }
+                  }
+                ]
+              },
+              "level": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status",
+                      "value"
+                    ],
+                    "properties": {
+                      "status": {
+                        "const": "observed"
+                      },
+                      "value": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 60
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status"
+                    ],
+                    "properties": {
+                      "status": {
+                        "const": "unavailable"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "transport": {
+            "const": "local-copy-only-not-live-desktop"
+          }
+        }
+      }
+    }
+  }
+}

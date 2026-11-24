@@ -9,3 +9,7 @@ __pycache__/
 .venv/
 node_modules/
 worker-results/
+.builddeps/
+builds/
+local-evidence/
+.core-work/

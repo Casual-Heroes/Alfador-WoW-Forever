@@ -1,0 +1,39 @@
+{
+  "schema": "alfador.wow.forever.character-context.draft1",
+  "game": "wow-forever",
+  "revision": "synthetic-structure-only",
+  "character": {
+    "subject": "synthetic-not-a-real-character",
+    "region": "unknown"
+  },
+  "provenance": {
+    "source": "wow-addon-api",
+    "capturedAt": null,
+    "retrievedAt": "2026-11-18T00:00:00Z",
+    "freshness": "historical",
+    "sourceRevision": "synthetic-not-collected"
+  },
+  "build": {
+    "version": {
+      "status": "unavailable"
+    },
+    "number": {
+      "status": "unavailable"
+    },
+    "interface": {
+      "status": "unavailable"
+    }
+  },
+  "zone": {
+    "status": "unavailable"
+  },
+  "summary": {
+    "status": "unavailable"
+  },
+  "talents": {
+    "status": "unavailable"
+  },
+  "equipment": {
+    "status": "unavailable"
+  }
+}

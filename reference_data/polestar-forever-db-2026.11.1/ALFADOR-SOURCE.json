@@ -1,0 +1,15 @@
+{
+  "retrievedDate": "2026-11-21",
+  "release": "https://github.com/fitzforge/polestar/releases/tag/data-v2026.11.1",
+  "asset": "forever-db-2026.11.1.zip",
+  "sha256": "24a1072d69dd00c535ab1d13825354a1fd7a631d92cf8900538e81fca412919d",
+  "producerCommit": "6d0de256e66674512e453a2990076d84f7e979bb",
+  "clientBuild": "1.60.1.70532",
+  "tablesVerified": 15,
+  "uniqueQuestIds": 5287,
+  "upstreamQuestCoverage": {
+    "of": 5408,
+    "what": "quests published",
+    "with": 5287
+  }
+}

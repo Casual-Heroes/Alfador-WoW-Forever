@@ -1,0 +1,6 @@
+## Interface: 16001
+## Title: Alfador-wow - Transfer Test (source review only)
+## Notes: Eight harmless self-addressed native log markers. No gameplay data or auto logging.
+## Author: Alfador
+## Version: 0.0.4-source
+TransferTest.lua

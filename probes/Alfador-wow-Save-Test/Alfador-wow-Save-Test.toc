@@ -1,0 +1,7 @@
+## Interface: 16001
+## Title: Alfador-wow - Save Test (source review only)
+## Notes: Manual bounded save markers only; no character/gameplay data or network.
+## Author: Alfador
+## Version: 0.0.1-source
+## SavedVariables: AlfadorWowSaveTestEvidence
+SaveTest.lua

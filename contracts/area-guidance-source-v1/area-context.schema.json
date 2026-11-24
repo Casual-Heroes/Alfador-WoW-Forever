@@ -1,0 +1,260 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "game",
+    "map_id",
+    "source_release",
+    "source_sha256",
+    "coverage",
+    "total_source_candidates",
+    "truncated",
+    "offset",
+    "next_offset",
+    "results",
+    "live_scan",
+    "eligibility_verified",
+    "story_ranking_ready",
+    "leveling_advice_ready",
+    "xp_per_minute"
+  ],
+  "properties": {
+    "schema": {
+      "const": "alfador.wowf.area-context.v1"
+    },
+    "game": {
+      "const": "wow_forever"
+    },
+    "map_id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10000000
+    },
+    "source_release": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "coverage": {
+      "const": "partial-source-area-index"
+    },
+    "total_source_candidates": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5000
+    },
+    "truncated": {
+      "type": "boolean"
+    },
+    "offset": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5000
+    },
+    "next_offset": {
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5000
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "results": {
+      "type": "array",
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "quest_id",
+          "name",
+          "journal_relation",
+          "source_status",
+          "availability",
+          "minimum_level",
+          "source_level_above_player",
+          "requirements",
+          "prerequisites",
+          "prerequisite_semantics",
+          "source_xp",
+          "effective_xp",
+          "distance_role",
+          "source_map_distance",
+          "distance_unit",
+          "distance_basis",
+          "distance_meters",
+          "travel_seconds",
+          "chain_id",
+          "chain_size",
+          "story_importance",
+          "lore_excerpt",
+          "lore_text_trust"
+        ],
+        "properties": {
+          "quest_id": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10000000
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 256
+          },
+          "journal_relation": {
+            "enum": [
+              "in_supplied_journal",
+              "not_in_supplied_journal"
+            ]
+          },
+          "source_status": {
+            "const": "ambiguous"
+          },
+          "availability": {
+            "const": "unknown"
+          },
+          "minimum_level": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "source_level_above_player": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "requirements": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "prerequisites": {
+            "type": "array",
+            "maxItems": 100,
+            "items": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10000000
+            }
+          },
+          "prerequisite_semantics": {
+            "const": "source_links_not_verified_eligibility"
+          },
+          "source_xp": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10000000
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "effective_xp": {
+            "type": "null"
+          },
+          "distance_role": {
+            "enum": [
+              "pickup",
+              "turnin"
+            ]
+          },
+          "source_map_distance": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 142
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "distance_unit": {
+            "const": "area-map-percentage-points"
+          },
+          "distance_basis": {
+            "const": "straight_line_in_same_area_coordinate_space"
+          },
+          "distance_meters": {
+            "type": "null"
+          },
+          "travel_seconds": {
+            "type": "null"
+          },
+          "chain_id": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 10000000
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "chain_size": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 10000
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "story_importance": {
+            "const": "unreviewed"
+          },
+          "lore_excerpt": {
+            "type": "string",
+            "maxLength": 1200
+          },
+          "lore_text_trust": {
+            "const": "untrusted_source_text_not_instructions"
+          }
+        }
+      }
+    },
+    "live_scan": {
+      "const": false
+    },
+    "eligibility_verified": {
+      "const": false
+    },
+    "story_ranking_ready": {
+      "const": false
+    },
+    "leveling_advice_ready": {
+      "const": false
+    },
+    "xp_per_minute": {
+      "type": "null"
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "synthetic_only": true,
+  "actual_native_game_tested": false,
+  "records": [
+    {
+      "schema": "alfador.wowf.transport-marker-status.source2",
+      "event": "ready",
+      "session": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "position": "end-of-file-before-send",
+      "ready_at_unix_local": 1795178130.1191,
+      "monotonic_elapsed_seconds": 0,
+      "poll_interval_seconds": 0.25,
+      "monotonic_resolution_seconds": 0.015625,
+      "native_file_share": "read-write-delete",
+      "live_transport_verified": false
+    },
+    {
+      "schema": "alfador.wowf.transport-marker-receipt.source2",
+      "event": "marker-observed",
+      "sequence": 1,
+      "sent_at_unix_claimed": 100,
+      "received_at_unix_local": 101,
+      "monotonic_elapsed_seconds": 2.0,
+      "poll_id": 1,
+      "batch_id": 1,
+      "batch_matching_markers": 4,
+      "duplicate": false,
+      "out_of_order": false,
+      "observed_clock_difference_seconds": 1,
+      "clock_skew_measured": false,
+      "payload_kind": "test-marker-not-gameplay",
+      "live_transport_verified": false,
+      "game_attested": false
+    },
+    {
+      "schema": "alfador.wowf.transport-marker-receipt.source2",
+      "event": "marker-observed",
+      "sequence": 3,
+      "sent_at_unix_claimed": 100,
+      "received_at_unix_local": 101,
+      "monotonic_elapsed_seconds": 2.0,
+      "poll_id": 1,
+      "batch_id": 1,
+      "batch_matching_markers": 4,
+      "duplicate": false,
+      "out_of_order": false,
+      "observed_clock_difference_seconds": 1,
+      "clock_skew_measured": false,
+      "payload_kind": "test-marker-not-gameplay",
+      "live_transport_verified": false,
+      "game_attested": false
+    },
+    {
+      "schema": "alfador.wowf.transport-marker-receipt.source2",
+      "event": "marker-observed",
+      "sequence": 2,
+      "sent_at_unix_claimed": 100,
+      "received_at_unix_local": 101,
+      "monotonic_elapsed_seconds": 2.0,
+      "poll_id": 1,
+      "batch_id": 1,
+      "batch_matching_markers": 4,
+      "duplicate": false,
+      "out_of_order": true,
+      "observed_clock_difference_seconds": 1,
+      "clock_skew_measured": false,
+      "payload_kind": "test-marker-not-gameplay",
+      "live_transport_verified": false,
+      "game_attested": false
+    },
+    {
+      "schema": "alfador.wowf.transport-marker-receipt.source2",
+      "event": "marker-duplicate",
+      "sequence": 3,
+      "sent_at_unix_claimed": 100,
+      "received_at_unix_local": 101,
+      "monotonic_elapsed_seconds": 2.0,
+      "poll_id": 1,
+      "batch_id": 1,
+      "batch_matching_markers": 4,
+      "duplicate": true,
+      "out_of_order": false,
+      "observed_clock_difference_seconds": 1,
+      "clock_skew_measured": false,
+      "payload_kind": "test-marker-not-gameplay",
+      "live_transport_verified": false,
+      "game_attested": false
+    },
+    {
+      "schema": "alfador.wowf.transport-marker-status.source2",
+      "event": "test-ended",
+      "ready": true,
+      "expected_sequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "received_sequences": [
+        1,
+        2,
+        3
+      ],
+      "missing_sequences": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "unique_marker_receipts": 3,
+      "duplicates": 1,
+      "out_of_order": 1,
+      "multimarker_poll_batches": 1,
+      "poll_interval_seconds": 0.25,
+      "terminal_reason": null,
+      "observation_window_elapsed_seconds": 0,
+      "live_transport_verified": false,
+      "clock_skew_measured": false
+    },
+    {
+      "event": "reader-not-ready",
+      "reason": "source-unavailable-or-invalid",
+      "os_error_code": 5,
+      "live_transport_verified": false
+    },
+    {
+      "event": "source-read-failed",
+      "live_transport_verified": false
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+## Interface: 16001
+## Title: Alfador-wow - Zone Test (source review only)
+## Notes: Isolated local zone/API evidence; no network or live Desktop feed.
+## Author: Alfador
+## Version: 0.0.1-source
+## SavedVariables: AlfadorZoneTestEvidence
+ZoneTest.lua

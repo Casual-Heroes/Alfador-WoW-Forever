@@ -1,0 +1,2505 @@
+{
+  "schema": "alfador.wowf.area-reference.v1",
+  "game": "wow_forever",
+  "release_id": "wowf-dun-morogh-area-source-20261119-01",
+  "client_build": 70959,
+  "build_compatibility": "unverified_exact_build",
+  "coverage": "partial-source-area-index",
+  "provenance": {
+    "origin": "https://data.morthen.net",
+    "pins": {
+      "/data/meta.json": "f3142fdafcd4a5fc9dd0682d8d57f98ecb98a11499f98ec67efdf70782293e58",
+      "/data/forever/zones.json": "093b336af622c39084bef1da3ad2dc84fa9d87bc821ea24f650b62b1892fa1a4",
+      "/data/forever/quests.json": "f184686fb1db71fe561f8bb2236005f6157ae6e084df2f2946da3c691573f552",
+      "/data/forever/quest/1.json": "eee075f9e598f4dccfb51e08211b209eb63b16cf6c4a3eb58d6322ee27866988",
+      "/data/forever/quest/2.json": "e5a2e23f713a0f5235f86becbf06ab8a7633dac398dc67b1675291f7dd97ecdc",
+      "/data/forever/quest/3.json": "0a956f035dd21f868caafe55208618c3ee2405b0521e2c1b0cdbf0389523d0dd",
+      "/data/forever/quest/4.json": "bb1b7956f9e1a92f75a733800e652f7699a42df84a8570fb3ccdf016d8fc5a91",
+      "/data/forever/quest/21.json": "dd5b1755ac262c6213c034b0d7cef6ed4bec3e15b3c0a93ba28d6ca7f06d7055",
+      "/data/forever/quest/28.json": "aeced87899261ae11cb7f7bfd0e4b9eb27eca8b93e83d8048526b05b889611a9",
+      "/data/forever/quest/29.json": "cf07f379d829eb6719a119722922554a66d2fcdfe055a9b30d56c4b05477646b",
+      "/data/forever/quest/33.json": "5d96faca91ad16cec6cf81f2d6a305ac96af0ba516e612b15d497632dd2f8a0d",
+      "/data/forever/quest/46.json": "a9f4de2a81e55f641c46ba3714cf0590131eb5b86eedfbc61e76265a48d9b126",
+      "/data/forever/quest/55.json": "df3880e5a3319b4dd51a8429a454f105ade091538e1aabf308cce7fd1dab7d89",
+      "/data/forever/quest/58.json": "ca38f59aa022253de00867a8e00b32bd123edddb89758cfdd2bcf4d12f7e2645",
+      "/data/forever/quest/67.json": "b78ddf5a594ad20fc16aedecf3214dccf089c9720cf90a2665f152a40ed542b7",
+      "/data/forever/quest/76.json": "b13227df0f671e446ef24b74aa24d1f6cb9e31b314e233c2de9c5d20d3d171cf",
+      "/data/forever/quest/950.json": "06f23989a8858ef1e863dfb7df1c3b6d992e89bed1208e3837b2a14b89b9fd92",
+      "/data/forever/quest/952.json": "1228c89103de08a561c0a5ab5888bf08785d1cd6d8fa316771bfd49d03b88e6b",
+      "/data/forever/quest/963.json": "48487beed0d7a40f58fc6dec2ffec195080f68c0e5494270c13ecbbcd2778b37",
+      "/data/forever/quest/964.json": "3a4115328f6ab3e3634aa2224b6dd3a57c275e6904d86401dafa6db43059fb2d",
+      "/data/forever/quest/972.json": "7fe0fec240a9a99230fcf171081faff33460cd2b614675d0d9da172de04b3da0",
+      "/data/forever/quest/983.json": "60674eb2e1be8639e83d83c477e08c98c71cededb59e8bd22107e10ef8e76a2f",
+      "/data/forever/quest/984.json": "9509d21199dc6b7f93a3050291532f6ede0815f41aec3914a0b42fa17bbf20df",
+      "/data/forever/quest/991.json": "d1d8864e568c78ccb039e6177baf99766b782eefe89bd618d23d4f093e46c515"
+    },
+    "provider_metadata": {
+      "built": "2026-11-20T02:51:31+00:00",
+      "questie": "5c094f6 2026-10-25",
+      "vmangos": "db-sqlite-70e38cd (2026-11-17)",
+      "azerothcore": "4d9d1d4",
+      "locales": [
+        "deDE",
+        "esES",
+        "esMX",
+        "frFR",
+        "koKR",
+        "ptBR",
+        "ruRU",
+        "zhCN",
+        "zhTW"
+      ],
+      "flavors": {
+        "forever": {
+          "label": "WoW Forever",
+          "counts": {
+            "quest": 5232,
+            "npc": 13396,
+            "object": 7035,
+            "item": 21294
+          }
+        }
+      }
+    },
+    "coordinate_note": "spawn coordinates are percentages in area-ID map space; never assume shared UI map transforms them",
+    "repository": "https://github.com/Stein-N/WoW-Quest-Database",
+    "repository_code_reference": "8153cf7536636208c91bc88e34082d1dc1bdeac0",
+    "repository_pin_does_not_pin_hosted_data": true,
+    "code_license": "GPL-3.0",
+    "captured_client_date": "2026-11-19",
+    "exact_build_authority": false,
+    "provider_timestamp_is_not_build_attestation": true
+  },
+  "quests": [
+    {
+      "quest_id": 170,
+      "name": "A New Threat",
+      "map_id": 1426,
+      "minimum_level": 1,
+      "source_xp": 170,
+      "requirements": "{\"reqLevel\":1,\"side\":\"A\"}",
+      "prerequisites": [
+        179
+      ],
+      "chain_id": 170,
+      "chain_size": 15,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "I hope you're here to lend us a hand, $c. After the last trogg attack, we could use all the help we can get.$b$bI hear the buggers have been popping up all across the lands, and it seems Coldridge Valley is no exception. They've been spotted all over the hills to the southeast and near the frozen lake.$b$bAnd that's not all, just a few nights ago, they attacked and overran our camp to the west! $b$bWe're a bit shorthanded here, $g lad : lass;, and we need strong arms to help drive the troggs back.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 29.71,
+          "y": 71.25
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 29.71,
+          "y": 71.25
+        }
+      ]
+    },
+    {
+      "quest_id": 179,
+      "name": "Dwarven Outfitters",
+      "map_id": 1426,
+      "minimum_level": 1,
+      "source_xp": 80,
+      "requirements": "{\"reqLevel\":1,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 170,
+      "chain_size": 15,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "What do we have here? You look as though you might need something to keep your hands warm, hm?$b$bI'll tell you what would help: a pair of nice, warm gloves. And, being the kind soul that I am, I'd be more than happy to provide you with a suitable pair. I've one condition, however.$b$bI need you to go get me some wolf meat. Nice arrangement, hm? You bring me some wolf meat, and I'll make sure you don't lose any digits to frostbite. Well, what do you say?",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 29.93,
+          "y": 71.2
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 29.93,
+          "y": 71.2
+        }
+      ]
+    },
+    {
+      "quest_id": 182,
+      "name": "The Troll Cave",
+      "map_id": 1426,
+      "minimum_level": 1,
+      "source_xp": 355,
+      "requirements": "{\"reqLevel\":1,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 6,
+      "chain_size": 195,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "My brother Senir and I were sent to different parts of Dun Morogh to investigate the threat posed by the trolls. The Senate has its hands full with the troggs, so they've no need for further annoyances.$b$bFrom what I've seen, the trolls aren't well situated here in Coldridge Valley--mostly the southern cave. I'd say that the army will not be necessary. A few strong arms should be more than enough.$b$bPerhaps you'd like to assist in this endeavor? I have the authority to offer compensation for your help.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 25.08,
+          "y": 75.71
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 25.08,
+          "y": 75.71
+        }
+      ]
+    },
+    {
+      "quest_id": 183,
+      "name": "The Boar Hunter",
+      "map_id": 1426,
+      "minimum_level": 1,
+      "source_xp": 250,
+      "requirements": "{\"reqLevel\":1,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Nothing like a day of boar hunting, eh?$b$bThough, here in Coldridge Valley, there are so many boars it almost takes the fun out of it. No need to get them charging. They're all angry and ready without any help. In fact, recently, there've been so many boars in the area, it's become dangerous for me to do my daily hunting.$b$bLong story short, if you could help me kill some of the boars, I would appreciate it.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 22.6,
+          "y": 71.43
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 22.6,
+          "y": 71.43
+        }
+      ]
+    },
+    {
+      "quest_id": 218,
+      "name": "The Stolen Journal",
+      "map_id": 1426,
+      "minimum_level": 1,
+      "source_xp": 560,
+      "requirements": "{\"reqLevel\":1,\"side\":\"A\"}",
+      "prerequisites": [
+        182
+      ],
+      "chain_id": 6,
+      "chain_size": 195,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "My journal! They took it away to the cave. The one that had it... It was a big brute with some odd markings on his skin and face. I didn't get a much better look than that.$b$bYou've had some luck with the trolls, maybe you could go get it back for me?",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 25.08,
+          "y": 75.71
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 25.08,
+          "y": 75.71
+        }
+      ]
+    },
+    {
+      "quest_id": 233,
+      "name": "Coldridge Valley Mail Delivery",
+      "map_id": 1426,
+      "minimum_level": 1,
+      "source_xp": 190,
+      "requirements": "{\"reqLevel\":1,\"side\":\"A\"}",
+      "prerequisites": [
+        179
+      ],
+      "chain_id": 170,
+      "chain_size": 15,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Hm, I don't suppose you'd be willing to do a favor for me, $g lad : lass;? A stack of letters came through the pass today, but I don't have the time to send them along.$b$bThey're all addressed to Talin Keeneye. You can find him to the west down the road. He's set up camp next to the frozen lake.$b$bWhat do you say?",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 29.93,
+          "y": 71.2
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 22.6,
+          "y": 71.43
+        }
+      ]
+    },
+    {
+      "quest_id": 234,
+      "name": "Coldridge Valley Mail Delivery",
+      "map_id": 1426,
+      "minimum_level": 1,
+      "source_xp": 270,
+      "requirements": "{\"reqLevel\":1,\"side\":\"A\"}",
+      "prerequisites": [
+        233
+      ],
+      "chain_id": 170,
+      "chain_size": 15,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "If I remember correctly, Grelin's camp is down the road to the southeast. No doubt he'll be eager to get his mail.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 22.6,
+          "y": 71.43
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 25.08,
+          "y": 75.71
+        }
+      ]
+    },
+    {
+      "quest_id": 282,
+      "name": "Senir's Observations",
+      "map_id": 1426,
+      "minimum_level": 1,
+      "source_xp": 335,
+      "requirements": "{\"reqLevel\":1,\"side\":\"A\"}",
+      "prerequisites": [
+        218
+      ],
+      "chain_id": 6,
+      "chain_size": 195,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "I was planning on sending my apprentice to my brother Senir with my report, but I would feel much better were it placed in more... reliable hands. That is, of course, if you wouldn't mind?$b$bHmm... you'll have to take the tunnel to get to Kharanos.$b$bSpeak with Mountaineer Thalos before going through the tunnel. It's completely infested with troggs now.$b$bFollow the road back to Anvilmar, then keep heading east to the tunnel, Thalos is stationed nearby.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 25.08,
+          "y": 75.71
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 33.48,
+          "y": 71.84
+        }
+      ]
+    },
+    {
+      "quest_id": 287,
+      "name": "Frostmane Hold",
+      "map_id": 1426,
+      "minimum_level": 7,
+      "source_xp": 590,
+      "requirements": "{\"reqLevel\":7,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 287,
+      "chain_size": 5,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "I'm behind on my report, and could use your help, $n. I just managed to find where the trolls are holed up, but I saw so many trolls, I was afraid to go in.$b$bHere's what I need... Go down to the cave, poke around inside, kill a few of the trolls, then come back here.$b$bTake the road north out of Kharanos, when you get to the bridge, follow the frozen river west until you reach Iceflow Lake. You'll find Brewnall Village on the west bank. The Hold is southwest of the village.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 46.73,
+          "y": 53.83
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 46.73,
+          "y": 53.83
+        }
+      ]
+    },
+    {
+      "quest_id": 291,
+      "name": "The Reports",
+      "map_id": 1426,
+      "minimum_level": 1,
+      "source_xp": 420,
+      "requirements": "{\"reqLevel\":1,\"side\":\"A\"}",
+      "prerequisites": [
+        287,
+        98323
+      ],
+      "chain_id": 287,
+      "chain_size": 5,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Excellent! Take my report to Senator Barin Redstone. He's a sour type, so don't let his less-than-sunny disposition get to you. He's in Ironforge, in the chamber where King Magni holds court.$b$bDon't know the way to Ironforge? Take the road out of Kharanos north, cross the bridge, then follow the road east--there are large banners flanking the road--up the mountainside.$b$bBy the way, if you might avoid mentioning how you assisted me? Can't let them think I'm not working hard out here, you know?",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 46.73,
+          "y": 53.83
+        },
+        {
+          "role": "turnin",
+          "area_id": 1537,
+          "x": 39.55,
+          "y": 57.49
+        }
+      ]
+    },
+    {
+      "quest_id": 308,
+      "name": "Distracting Jarven",
+      "map_id": 1426,
+      "minimum_level": 1,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":1,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 47.65,
+          "y": 52.66
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 47.65,
+          "y": 52.66
+        }
+      ]
+    },
+    {
+      "quest_id": 310,
+      "name": "Bitter Rivals",
+      "map_id": 1426,
+      "minimum_level": 2,
+      "source_xp": 135,
+      "requirements": "{\"reqLevel\":2,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 310,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "I have to admit, those Thunderbrews make some good drinks.  But they need to learn that theirs isn't the only decent brew!  Maybe you can help me teach them that lesson...\n\nHere, take this barrel of Barleybrew Scalder.  Sneak into the basement of the Thunderbrew Distillery in Kharanos and switch it with one of their barrels of Thunder Ale.  Then we'll see how their patrons like my brew over theirs!\n\nAnd if the barrels are guarded, then you might have to distract the guard ...",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 30.19,
+          "y": 45.53
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 47.72,
+          "y": 52.7
+        }
+      ]
+    },
+    {
+      "quest_id": 311,
+      "name": "Return to Marleth",
+      "map_id": 1426,
+      "minimum_level": 2,
+      "source_xp": 630,
+      "requirements": "{\"reqLevel\":2,\"side\":\"A\"}",
+      "prerequisites": [
+        310
+      ],
+      "chain_id": 310,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Having inserted a barrel of Marleth's Scalder in the Kharanos Distillery's cellar, you grab a barrel of Thunder Ale as proof of the deed...",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 47.72,
+          "y": 52.7
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 30.19,
+          "y": 45.53
+        }
+      ]
+    },
+    {
+      "quest_id": 312,
+      "name": "Tundra MacGrann's Stolen Stash",
+      "map_id": 1426,
+      "minimum_level": 7,
+      "source_xp": 910,
+      "requirements": "{\"reqLevel\":7,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "I had a month's worth of dried meats salted and locked away for the cold season.  Kept it locked so the bears wouldn't get it!  But while I was off hunting deer, that beast, Old Icebeard, made off with the meat locker.  He won't be able to smash through that Thorium though.  But I'll starve if I can't get my meats back.$b$bYou seem a bit more stealthy than me.  Perhaps you can retrieve my stash?  I'll never make it in and out of that cave fast enough with this bum leg of mine.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 34.57,
+          "y": 51.65
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 34.57,
+          "y": 51.65
+        }
+      ]
+    },
+    {
+      "quest_id": 313,
+      "name": "The Grizzled Den",
+      "map_id": 1426,
+      "minimum_level": 4,
+      "source_xp": 630,
+      "requirements": "{\"reqLevel\":4,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Driving a Siege Engine isn't for everyone.  It takes an iron grip and nerves of steel...lucky I have both!  How about you?  How's your mettle?  Want to prove it to me?\n\nWell...I'm looking to make my engine, Trollplow, a little more cozy.  How about you get me a heap of Wendigo Manes from the Grizzled Den, west of Kharanos.  Those manes would make a great rug for Trollplow's inside deck!",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 49.62,
+          "y": 48.61
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 49.62,
+          "y": 48.61
+        }
+      ]
+    },
+    {
+      "quest_id": 314,
+      "name": "Protecting the Herd",
+      "map_id": 1426,
+      "minimum_level": 6,
+      "source_xp": 910,
+      "requirements": "{\"reqLevel\":6,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "We heard the cries in the middle of the night.  Then this morning, sure enough, the herd was missing two rams.  That dastardly beast known as Vagash has been preying on our livelihood.  With most of King Magni's army off in distant lands fighting with the Alliance, there is no one to keep Vagash at bay.$b$bPerhaps you are brave enough to seek out the beast and slay him.  Bring me one of his fangs and I will reward you.  Vagash lurks just above the ranch here, but be warned, he is deadly.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 63.08,
+          "y": 49.85
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 63.08,
+          "y": 49.85
+        }
+      ]
+    },
+    {
+      "quest_id": 315,
+      "name": "The Perfect Stout",
+      "map_id": 1426,
+      "minimum_level": 5,
+      "source_xp": 780,
+      "requirements": "{\"reqLevel\":5,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 315,
+      "chain_size": 4,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "I'm on a quest, a quest to make the perfect stout.  I know I can do it -- brewing's in my blood.  I just need to find the right recipe...\n\nThe Frostmane trolls grow a plant, shimmerweed, high up in the hills to the east.  They use it in their strange, tribal rituals.  We dwarves haven't found much use for it, but it has a unique taste...and I want to experiment with it in my brews!\n\nGet me some shimmerweed from Frostmane seers, or swipe it from the trolls' shimmerweed baskets.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 30.19,
+          "y": 45.73
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 30.19,
+          "y": 45.73
+        }
+      ]
+    },
+    {
+      "quest_id": 317,
+      "name": "Stocking Jetsteam",
+      "map_id": 1426,
+      "minimum_level": 2,
+      "source_xp": 680,
+      "requirements": "{\"reqLevel\":2,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 317,
+      "chain_size": 4,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "I'm preparing to start a mission for the Siege Brigade.  It's a long one, and I need to stock Jetsteam with a month's worth of supplies.  So while Steelgrill is working on my tank, can you do some hunting for me?\n\nI'll need some fur for bedding, and boar meat for food.  You can get meat from boars and fur from the bears... you can find them both in the snow fields south of the Grizzled Den.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 49.43,
+          "y": 48.41
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 49.43,
+          "y": 48.41
+        }
+      ]
+    },
+    {
+      "quest_id": 318,
+      "name": "Evershine",
+      "map_id": 1426,
+      "minimum_level": 2,
+      "source_xp": 160,
+      "requirements": "{\"reqLevel\":2,\"side\":\"A\"}",
+      "prerequisites": [
+        317
+      ],
+      "chain_id": 317,
+      "chain_size": 4,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Rejold Barleybrew experiments with his brews.  Some of them taste good, some bad, and some...well, some will lay all but the stoutest dwarf flat.\n\nHe lives at Brewnall Village, west of Kharanos, and one of his drinks, Evershine, is what I want.  It'll help keep me warm while I'm on the cold road.\n\nAnd...the blessed stuff burns so hot I can throw it in Jetsteam's furnace for a burst of power!  That little tactic has gotten me out of more than one tight spot.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 49.43,
+          "y": 48.41
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 30.19,
+          "y": 45.73
+        }
+      ]
+    },
+    {
+      "quest_id": 319,
+      "name": "A Favor for Evershine",
+      "map_id": 1426,
+      "minimum_level": 2,
+      "source_xp": 530,
+      "requirements": "{\"reqLevel\":2,\"side\":\"A\"}",
+      "prerequisites": [
+        318
+      ],
+      "chain_id": 317,
+      "chain_size": 4,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "I have a cask of Evershine handy, but...can you do me a favor?  Brewnall village could use a hand against the wild animals that wander the nearby snows.  Sometimes they wander close.\n\nWe're not afraid of these bears and cats and boars - no self respecting dwarf would be - but if you can take care of those animals for us, then we'd have more time for our crafting and brewing.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 30.19,
+          "y": 45.73
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 30.19,
+          "y": 45.73
+        }
+      ]
+    },
+    {
+      "quest_id": 320,
+      "name": "Return to Bellowfiz",
+      "map_id": 1426,
+      "minimum_level": 2,
+      "source_xp": 880,
+      "requirements": "{\"reqLevel\":2,\"side\":\"A\"}",
+      "prerequisites": [
+        319
+      ],
+      "chain_id": 317,
+      "chain_size": 4,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Here's your cask of Evershine, $N.  And again, thank you for the hunting earlier.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 30.19,
+          "y": 45.73
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 49.43,
+          "y": 48.41
+        }
+      ]
+    },
+    {
+      "quest_id": 400,
+      "name": "Tools for Steelgrill",
+      "map_id": 1426,
+      "minimum_level": 2,
+      "source_xp": 110,
+      "requirements": "{\"reqLevel\":2,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Beldin Steelgrill owns the local mechanic shop, and he's the best siege engine tech there is!  But he's not forgiving to his tools.  I swear he almost breaks more arclight spanners than we can supply him with!\n\nWe just filled his last order for tools.  If you deliver it to him I'm sure he'll make it worth the effort.\n\nHis shop, Steelgrill's Depot, is just northeast of Kharanos.  And it's a local haunt for veteran siege engine pilots, so keep your ears open for opportunities while you're there.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 46.02,
+          "y": 51.68
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 50.44,
+          "y": 49.09
+        }
+      ]
+    },
+    {
+      "quest_id": 403,
+      "name": "Guarded Thunderbrew Barrel",
+      "map_id": 1426,
+      "minimum_level": 1,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":1,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 47.72,
+          "y": 52.7
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 47.72,
+          "y": 52.7
+        }
+      ]
+    },
+    {
+      "quest_id": 412,
+      "name": "Operation Recombobulation",
+      "map_id": 1426,
+      "minimum_level": 7,
+      "source_xp": 840,
+      "requirements": "{\"reqLevel\":7,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Upon further analysis of the Gnomeregan situation, it would appear as though we not only failed to eradicate the troggs but we also happened to turn most of the gnomish race into horrific, mindless, evil-doing leper gnomes.$b$bOzzie and I plan to reverse the horrible leper effect with our latest invention: The Recombobulator.  The machine is almost complete but we are in dire need of some Restabilization Cogs and Gyromechanic Gears.  Retrieve some from the leper gnomes out front of Gnomeregan for us.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 45.85,
+          "y": 49.37
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 45.85,
+          "y": 49.37
+        }
+      ]
+    },
+    {
+      "quest_id": 413,
+      "name": "Shimmer Stout",
+      "map_id": 1426,
+      "minimum_level": 8,
+      "source_xp": 420,
+      "requirements": "{\"reqLevel\":8,\"side\":\"A\"}",
+      "prerequisites": [
+        315
+      ],
+      "chain_id": 315,
+      "chain_size": 4,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "I'd like my brother Wellart to try my new Shimmer Stout.  He's a Mountaineer stationed in the southern guard tower, one of two towers on the border to Loch Modan.\n\nHe may not be a brewer like the rest of us Barleybrews, but he loves his drinks and I know he'll like this one.\n\nCan you bring him this Barrel of Shimmer Stout for me?",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 30.19,
+          "y": 45.73
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 86.28,
+          "y": 48.81
+        }
+      ]
+    },
+    {
+      "quest_id": 414,
+      "name": "Stout to Kadrell",
+      "map_id": 1426,
+      "minimum_level": 8,
+      "source_xp": 630,
+      "requirements": "{\"reqLevel\":8,\"side\":\"A\"}",
+      "prerequisites": [
+        413
+      ],
+      "chain_id": 315,
+      "chain_size": 4,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "I've been drinking more of that Shimmer Stout my brother made - it's great stuff!  I want a fellow Mountaineer to try it.  His name's Kadrell, and he's usually patrolling the road through Thelsamar in Loch Modan.\n\nTo get to Thelsamar, go southeast through the tunnel, then turn northeast when the path forks into a road.  Follow that road straight into Thelsamar.\n\nGive Mountaineer Kadrell this cask of Shimmer Stout and see what he thinks!",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 86.28,
+          "y": 48.81
+        },
+        {
+          "role": "turnin",
+          "area_id": 38,
+          "x": 32.63,
+          "y": 49.74
+        }
+      ]
+    },
+    {
+      "quest_id": 415,
+      "name": "Rejold's New Brew",
+      "map_id": 1426,
+      "minimum_level": 8,
+      "source_xp": 85,
+      "requirements": "{\"reqLevel\":8,\"side\":\"A\"}",
+      "prerequisites": [
+        315
+      ],
+      "chain_id": 315,
+      "chain_size": 4,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Rejold Barleybrew at Brewnall Village has been asking for you.\n\nHe wants to talk to you about a new drink he's been brewing...said something about you helping him with it.  You might want to head back to Brewnall Village and see what he has to say.\n\nThere could be some free booze in it for you...",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 49.43,
+          "y": 48.41
+        },
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 46.02,
+          "y": 51.68
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 30.19,
+          "y": 45.73
+        }
+      ]
+    },
+    {
+      "quest_id": 417,
+      "name": "A Pilot's Revenge",
+      "map_id": 1426,
+      "minimum_level": 8,
+      "source_xp": 660,
+      "requirements": "{\"reqLevel\":8,\"side\":\"A\"}",
+      "prerequisites": [
+        419
+      ],
+      "chain_id": 417,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Hildelve wrote in his journal that he was attacked by Mangeclaw, a \"huge Ice Claw Bear.\"  He drove off the beast, but not before it mauled him savagely.\n\nJudging from the state of Hildelve's body, Mangeclaw must have later returned and killed him.\n\nHowever, Hildelve wrote in his journal his one, final wish:\n\nRevenge against Mangeclaw.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 79.67,
+          "y": 36.17
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 83.89,
+          "y": 39.19
+        }
+      ]
+    },
+    {
+      "quest_id": 419,
+      "name": "The Lost Pilot",
+      "map_id": 1426,
+      "minimum_level": 8,
+      "source_xp": 420,
+      "requirements": "{\"reqLevel\":8,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 417,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "My friend and fellow Siege Engine pilot, Mori Hildelve, is lost in the hills.  We were looking for a rare ore that's needed for a high-grade blastpowder, and during our search he drove his engine up a steep hill and busted it!\n\nStill convinced that ore was in these mountains, Hildelve charged me to guard our engines while he continued on foot, searching.\n\nIt's been days, and I've heard some beastly growls in the hills at night.  Mori's tough as nails, but I'm worried.\n\nPlease, $N.  Find him.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 83.89,
+          "y": 39.19
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 79.67,
+          "y": 36.17
+        }
+      ]
+    },
+    {
+      "quest_id": 420,
+      "name": "Senir's Observations",
+      "map_id": 1426,
+      "minimum_level": 1,
+      "source_xp": 335,
+      "requirements": "{\"reqLevel\":1,\"side\":\"A\"}",
+      "prerequisites": [
+        282
+      ],
+      "chain_id": 6,
+      "chain_size": 195,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "The troggs in the tunnel are extremely hostile, and haven't shown any hesitation in attacking travelers through the tunnel. You seem tough enough, though, so you should probably be safe.$b$bDirections? If you're going to speak with Senir, you'll find him in Kharanos.$b$bMake your way through the tunnel, and after you come out on the other side, just keep following the road, it'll run right into Kharanos.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 33.48,
+          "y": 71.84
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 46.73,
+          "y": 53.83
+        }
+      ]
+    },
+    {
+      "quest_id": 432,
+      "name": "Those Blasted Troggs!",
+      "map_id": 1426,
+      "minimum_level": 5,
+      "source_xp": 590,
+      "requirements": "{\"reqLevel\":5,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Those Light-blasted troggs, turning my work site into a wreck! Look at that, there goes another barrel of powder!$b$bOhhh, I wish I could go down there and wring every one of their scrawny little necks! I want to kill them all!$b$bThis can't be good for my health, all this stress and anger... What have they left me with? Nothing!$b$bI'd kill them myself, but my aim's no good anymore! You go into the quarry and kill some of the filthy buggers! I'll pay you! Just hurt them, kill them!",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 69.08,
+          "y": 56.33
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 69.08,
+          "y": 56.33
+        }
+      ]
+    },
+    {
+      "quest_id": 433,
+      "name": "The Public Servant",
+      "map_id": 1426,
+      "minimum_level": 6,
+      "source_xp": 660,
+      "requirements": "{\"reqLevel\":6,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "As a member of the Senate and the Explorers' League, I've taken it upon myself to take care of this part of the trogg infestation that has gripped our lands.$b$bThey've certainly made a mess of Gol'Bolar quarry, and for no reason. As we dug deep into the earth, they poured out, destroying our equipment and driving the miners out. There's not much for us to do but to exterminate the lot of them, rebuild, then get back to work.$b$bIf you help me with the troggs, I'll gladly recompense you for your time.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 68.67,
+          "y": 55.97
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 68.67,
+          "y": 55.97
+        }
+      ]
+    },
+    {
+      "quest_id": 466,
+      "name": "Search for Incendicite",
+      "map_id": 1426,
+      "minimum_level": 20,
+      "source_xp": 1750,
+      "requirements": "{\"reqLevel\":20,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 466,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "I heard that a rare ore, incendicite, was found in the Wetlands, in a cave northwest of Algaz Gate.  Incendicite is volatile stuff and hard to use without blowing yourself up, but I'm sure if it's smelted the right way it could make cannon shells that pack a mighty punch!\n\nGet me incendicite ore and I'll find someone brave enough to experiment with it.\n\nOh, and to extract that ore from a vein you'll need skill in mining.  If you don't have it, then ... bring a friend who does to that cave!",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 49.62,
+          "y": 48.61
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 49.62,
+          "y": 48.61
+        }
+      ]
+    },
+    {
+      "quest_id": 467,
+      "name": "Stonegear's Search",
+      "map_id": 1426,
+      "minimum_level": 20,
+      "source_xp": 460,
+      "requirements": "{\"reqLevel\":20,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 466,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Pilot Stonegear loves his siege engine, as every pilot should!  And he's always eager to find new ways to improve his tank's firepower!\n\nHe heard rumors of a rare ore and is looking for someone to hunt it down for him.  If your boots are starting to itch, then find Stonegear at Steelgrill's Depot in Dun Morogh and see what he wants.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 38,
+          "x": 32.63,
+          "y": 49.74
+        },
+        {
+          "role": "pickup",
+          "area_id": 1537,
+          "x": 72.73,
+          "y": 94.01
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 49.62,
+          "y": 48.61
+        }
+      ]
+    },
+    {
+      "quest_id": 2160,
+      "name": "Supplies to Tannok",
+      "map_id": 1426,
+      "minimum_level": 1,
+      "source_xp": 110,
+      "requirements": "{\"reqLevel\":1,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Hey! You look like a hearty adventurer. If you're planning on braving the pass, do you suppose you could bring a package to the inn in Kharanos?$b$bYou were planning on stopping at the inn, right? If you make it through the pass, you'll definitely want to take a breather there.$b$bAnyways, bring this to Tannok Frosthammer, the innkeeper's assistant. I can't get through the pass myself, and it'll be days until a Mountaineer escort comes through!",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 33.85,
+          "y": 72.24
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 47.22,
+          "y": 52.19
+        }
+      ]
+    },
+    {
+      "quest_id": 2841,
+      "name": "Rig Wars",
+      "map_id": 1426,
+      "minimum_level": 25,
+      "source_xp": 2750,
+      "requirements": "{\"reqLevel\":25,\"side\":\"H\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Gnome technology - two years ago its most common use was as a punch line. Times certainly have changed. Now they've got a new rig built that's better than all our shredder models combined. I need the blueprints, $N!\n\nUnfortunately, the plans are locked away in a safe near Mekgineer Thermaplugg. To make matters worse, the combination to the safe is only known by Mekgineer Thermaplugg.\n\nDo whatever you have to do to get that combination, $N. Then crack open that safe and bring back those blueprints!",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1637,
+          "x": 75.99,
+          "y": 25.41
+        },
+        {
+          "role": "turnin",
+          "area_id": 1637,
+          "x": 75.99,
+          "y": 25.41
+        }
+      ]
+    },
+    {
+      "quest_id": 2842,
+      "name": "Chief Engineer Scooty",
+      "map_id": 1426,
+      "minimum_level": 20,
+      "source_xp": 275,
+      "requirements": "{\"reqLevel\":20,\"side\":\"H\"}",
+      "prerequisites": [],
+      "chain_id": 2842,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "As soon as we got word from Kernobee about the new gnomish rig, Scooty and I began work on the Transpolyporter 6000: The fastest and most reliable way to Gnomeregan.\n\nIt's finally ready for passengers to board, $N. If you want to give it a try, go to Booty Bay and talk with Scooty at the wind rider roost. To get to Booty Bay, take the boat from Ratchet.\n\nOf course, you could always try and make the run to Gnomeregan through the dwarf infested mountains of Dun Morogh!",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1637,
+          "x": 75.49,
+          "y": 25.36
+        },
+        {
+          "role": "turnin",
+          "area_id": 33,
+          "x": 27.6,
+          "y": 77.48
+        }
+      ]
+    },
+    {
+      "quest_id": 2843,
+      "name": "Gnomer-gooooone!",
+      "map_id": 1426,
+      "minimum_level": 20,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":20,\"side\":\"H\"}",
+      "prerequisites": [
+        2842
+      ],
+      "chain_id": 2842,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "As long as you have the transponder in your possession, all you need to do is step on the pad and you'll be teleported to Gnomeregan.\n\nYou may experience some unusual side effects, but none of those should be permanent... anymore.\n\nI almost forgot the most important part - getting back. When you're ready to come back, just step on the transpolyporter pad in Gnomeregan!\n\nNow to calibrate the transponder to your size and weight.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 33,
+          "x": 27.6,
+          "y": 77.48
+        },
+        {
+          "role": "turnin",
+          "area_id": 33,
+          "x": 27.6,
+          "y": 77.48
+        }
+      ]
+    },
+    {
+      "quest_id": 2904,
+      "name": "A Fine Mess",
+      "map_id": 1426,
+      "minimum_level": 24,
+      "source_xp": 2450,
+      "requirements": "{\"reqLevel\":24,\"side\":\"B\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "<Kernobee groans.> Wha.. What happened?\n\nThe last thing I remember is being captured by a group of dark iron dwarves, beaten to within an inch of my life and then thrown in here with these filthy troggs.\n\nGet me out of here, $N!\n\nHere's the plan: Lead me to the exit; if we make it out alive, you go to Booty Bay and let Scooty know that I went to Ratchet to warn Tinkerwiz of the dark iron's involvement in the making of that super rig.\n\nLet's get going!",
+      "locations": [
+        {
+          "role": "turnin",
+          "area_id": 33,
+          "x": 27.6,
+          "y": 77.48
+        }
+      ]
+    },
+    {
+      "quest_id": 2922,
+      "name": "Save Techbot's Brain!",
+      "map_id": 1426,
+      "minimum_level": 20,
+      "source_xp": 2650,
+      "requirements": "{\"reqLevel\":20,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 2922,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "When our beloved city Gnomeregan fell, a rogue spark must have jolted my poor creation, Techbot.  It once aided me and my associates with its countless gizmos and limitless store of information, but its positronic brain has polarized.  Now it's negatronic... and Techbot's behaviors are reversed.  It roams Gnomeregan in a frenzy!\n\nBut perhaps it can be salvaged.  Perhaps, if you can retrieve Techbot's memory core and bring it to me, I can discover the cause of the polarization and fix my poor Techbot.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1537,
+          "x": 69.55,
+          "y": 50.33
+        },
+        {
+          "role": "turnin",
+          "area_id": 1537,
+          "x": 69.55,
+          "y": 50.33
+        }
+      ]
+    },
+    {
+      "quest_id": 2923,
+      "name": "Tinkmaster Overspark",
+      "map_id": 1426,
+      "minimum_level": 20,
+      "source_xp": 210,
+      "requirements": "{\"reqLevel\":20,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 2922,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Tinkmaster Overspark is very upset with the fate of his mechanical creation, Techbot.  I remember Techbot as a kind and helpful tool for the gnomes, but Overspark tells me it's malfunctioned.\n\nVery sad.  But with luck perhaps he can be fixed!\n\nSpeak with Tinkmaster Overspark, in Tinker Town in Ironforge.  He would welcome your help.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1519,
+          "x": 51.05,
+          "y": 48.39
+        },
+        {
+          "role": "turnin",
+          "area_id": 1537,
+          "x": 69.55,
+          "y": 50.33
+        }
+      ]
+    },
+    {
+      "quest_id": 2924,
+      "name": "Essential Artificials",
+      "map_id": 1426,
+      "minimum_level": 24,
+      "source_xp": 3050,
+      "requirements": "{\"reqLevel\":24,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 2924,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "A nigh-universal mechanical component--the essential artificial--was of great use to the tinkers and smiths of Gnomeregan.  But during the frantic exodus from our city, no one remembered to take any of these devices with them!  And I need a large supply of them for work I will soon undertake.\n\nPlease, go into Gnomeregan and get me some essential artificials.  You'll find them in the deeper areas of our city, held in containers called artificial extrapolators.\n\nThank you, $N, and please hurry!",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1537,
+          "x": 67.92,
+          "y": 46.1
+        },
+        {
+          "role": "turnin",
+          "area_id": 1537,
+          "x": 67.92,
+          "y": 46.1
+        }
+      ]
+    },
+    {
+      "quest_id": 2925,
+      "name": "Klockmort's Essentials",
+      "map_id": 1426,
+      "minimum_level": 24,
+      "source_xp": 245,
+      "requirements": "{\"reqLevel\":24,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 2924,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "A gnome friend, Klockmort Spannerspan, sent word to me from Ironforge.  He tells me he needs help on a dangerous, but essential, mission into Gnomeregan, the once great gnome city now contaminated and filled with mad gnomes and their devices.\n\nI must stay here, but my heart aches to help my friend.  If you can go in my stead, then I would be much indebted to you.\n\nYou may find Klockmort in Tinkertown, in Ironforge.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1657,
+          "x": 59.51,
+          "y": 45.38
+        },
+        {
+          "role": "turnin",
+          "area_id": 1537,
+          "x": 67.92,
+          "y": 46.1
+        }
+      ]
+    },
+    {
+      "quest_id": 2926,
+      "name": "Gnogaine",
+      "map_id": 1426,
+      "minimum_level": 20,
+      "source_xp": 2200,
+      "requirements": "{\"reqLevel\":20,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 2926,
+      "chain_size": 3,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Since the accident, all Gnoarn thinks about or talks about is cleansing Gnomeregan of the trogg infestation and finding a cure for the sickness that plagues it, $N.\n\nLuckily, Razzle and I are close to some kind of cure - either that or the recipe for a really powerful rum. We won't know until we test! Naturally, in order to test our theory, we're going to need a few things; namely, fallout from the irradiated troggs in Gnomeregan. Fill up this phial with the green glow and bring it back!",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 45.89,
+          "y": 49.39
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 45.89,
+          "y": 49.39
+        }
+      ]
+    },
+    {
+      "quest_id": 2927,
+      "name": "The Day After",
+      "map_id": 1426,
+      "minimum_level": 20,
+      "source_xp": 220,
+      "requirements": "{\"reqLevel\":20,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 2926,
+      "chain_size": 3,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "You don't think I was always bald, do you? No $g sir:ma'am;! It was the radiation leak in Gnomeregan that caused this tragic hair loss. Before that day, I had the only gnomefro in all of Azeroth.\n\n<Gnoarn shakes his fist in the air.>\n\nDamn those damned dirty troggs - damn them all!!\n\nPerhaps it's not too late, $N. We may still be able to save it - the city I mean! Speak to Ozzie Togglevolt in Kharanos. He and his partner Razzle are working on a solution.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1537,
+          "x": 69.18,
+          "y": 50.55
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 45.89,
+          "y": 49.39
+        }
+      ]
+    },
+    {
+      "quest_id": 2928,
+      "name": "Gyrodrillmatic Excavationators",
+      "map_id": 1426,
+      "minimum_level": 20,
+      "source_xp": 2450,
+      "requirements": "{\"reqLevel\":20,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "It's terrible, $N. We are not going to have enough parts to get our fleet of gyrodrillmatic excavationators to Dun Morogh.\n\nWhat we need are spare parts, $N. What better place to get the spare parts for our vehicles than Gnomeregan? I hear that bots and mechs roam around that place like cattle on an open range.\n\nWhat I need you to do is go to Gnomeregan and tear apart those robots. Bring me back their robot guts. Two dozen should be sufficient.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1519,
+          "x": 62.63,
+          "y": 34.11
+        },
+        {
+          "role": "turnin",
+          "area_id": 1519,
+          "x": 62.63,
+          "y": 34.11
+        }
+      ]
+    },
+    {
+      "quest_id": 2929,
+      "name": "The Grand Betrayal",
+      "map_id": 1426,
+      "minimum_level": 25,
+      "source_xp": 2750,
+      "requirements": "{\"reqLevel\":25,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "I trusted Thermaplugg, $r. Never did I expect that he would betray me and the entire gnomish people. And for what? Power? Wealth? All things that he would have had in time. Now we have been displaced from our home and that madman is in charge. The king of nothing....\n\nWe will retake Gnomeregan, $N. We will not stop until the city is back in our control. If you wish to join in our fight, a simple task I ask of you: Kill the betrayer. Destroy Mekgineer Thermaplugg.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1537,
+          "x": 68.75,
+          "y": 48.97
+        },
+        {
+          "role": "turnin",
+          "area_id": 1537,
+          "x": 68.75,
+          "y": 48.97
+        }
+      ]
+    },
+    {
+      "quest_id": 2930,
+      "name": "Data Rescue",
+      "map_id": 1426,
+      "minimum_level": 25,
+      "source_xp": 3650,
+      "requirements": "{\"reqLevel\":25,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 2930,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "When we fled Gnomeregan, we left so much data behind!  Vitally important data!\n\nI need the data on a prismatic punch card, from a Matrix Punchograph 3005-D high security terminal, deep in Gnomeregan.  You must access the terminal, but to do that you first need clearance... and to get that you must access lower security terminals-- models -A, -B and -C.  And to do THAT you need security punch cards, starting with white... and we left all the punch cards in the city.\n\nIt's a catastrophe!  Can you help?",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1537,
+          "x": 69.83,
+          "y": 48.1
+        },
+        {
+          "role": "turnin",
+          "area_id": 1537,
+          "x": 69.83,
+          "y": 48.1
+        }
+      ]
+    },
+    {
+      "quest_id": 2931,
+      "name": "Castpipe's Task",
+      "map_id": 1426,
+      "minimum_level": 25,
+      "source_xp": 230,
+      "requirements": "{\"reqLevel\":25,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 2930,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Master Mechanic Castpipe in Ironforge has need of adventurers!  He's organizing bands to reenter Gnomeregan on a data retrieval mission of top security and importance.\n\nCastpipe might not be a member of the Enlightened Assembly of Arcanology, Alchemy and Engineering Sciences like I am, but he's still a smart gnome so if he thinks it's important, then by my calculations there's an eighty-four percent probability that it really is important!\n\nThose are good odds!",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 406,
+          "x": 59.52,
+          "y": 67.15
+        },
+        {
+          "role": "turnin",
+          "area_id": 1537,
+          "x": 69.83,
+          "y": 48.1
+        }
+      ]
+    },
+    {
+      "quest_id": 2945,
+      "name": "Grime-Encrusted Ring",
+      "map_id": 1426,
+      "minimum_level": 28,
+      "source_xp": 2700,
+      "requirements": "{\"reqLevel\":28,\"side\":\"B\"}",
+      "prerequisites": [],
+      "chain_id": 2945,
+      "chain_size": 5,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "You have uncovered what appears to be a ring from the corpse of one of the Dark Iron dwarves.  It is difficult to tell what kind of ring it is, however; dirt and hardened residue cake the item completely, making wearing it impossible.  You think you can make out the slight luster of precious metal and maybe even the glint of a gem under the residue.\n\nIf you are going to make use of this ring, you are going to need to find something to get the hardened residue off of it.",
+      "locations": []
+    },
+    {
+      "quest_id": 2947,
+      "name": "Return of the Ring",
+      "map_id": 1426,
+      "minimum_level": 28,
+      "source_xp": 2700,
+      "requirements": "{\"reqLevel\":28,\"side\":\"A\"}",
+      "prerequisites": [
+        2945
+      ],
+      "chain_id": 2945,
+      "chain_size": 5,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Opening the box produced by the Sparklematic 5200 reveals what you had suspected - a shiny ring!  Wearing the ring, you feel magic power surge through you body.\n\nInside the band is a small but nonetheless discernable imprint of the seal of Ironforge.  Next to that, three small initials are engraved: \"TdK\".  This may signify either the initials of the previous owner, or perhaps the initials of the ring's crafter.  Keep the ring... or return it to this person.  Decisions, decisions...",
+      "locations": [
+        {
+          "role": "turnin",
+          "area_id": 1537,
+          "x": 36.38,
+          "y": 3.61
+        }
+      ]
+    },
+    {
+      "quest_id": 2949,
+      "name": "Return of the Ring",
+      "map_id": 1426,
+      "minimum_level": 28,
+      "source_xp": 2700,
+      "requirements": "{\"reqLevel\":28,\"side\":\"H\"}",
+      "prerequisites": [
+        2945
+      ],
+      "chain_id": 2945,
+      "chain_size": 5,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Opening the box produced by the Sparklematic 5200 reveals a shiny ring!  Donning the ring, you feel magic power surge through your body.\n\nInside the band is a small but nonetheless discernable imprint of the seal of Orgrimmar.  Engraved letters are next to it, but only the first three stand out even after cleaning: \"NOG...\"\n\nThis may signify either the initials of the previous owner, or perhaps the initials of the ring's crafter.  Keep the ring... or find \"NOG\" - decisions, decisions...",
+      "locations": [
+        {
+          "role": "turnin",
+          "area_id": 1637,
+          "x": 75.99,
+          "y": 25.41
+        }
+      ]
+    },
+    {
+      "quest_id": 2951,
+      "name": "The Sparklematic 5200!",
+      "map_id": 1426,
+      "minimum_level": 25,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":25,\"side\":\"B\"}",
+      "prerequisites": [],
+      "chain_id": 2951,
+      "chain_size": 9,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "This contraption stands out amongst the gnomes holding out against the madness outside the room.  A small plaque on the device reads \"The Sparklematic 5200\", followed by some text:\n\n\"Grime and residue ruining your sparklies?  The Sparklematic 5200 puts the shine back in shine-tastic!  Insert the item you wish to clean and deposit three silver coins in the coin slot.  Give the Sparklematic 5200 a moment for operation, and voila!  Your valuables will emerge clean and shiny!\"",
+      "locations": []
+    },
+    {
+      "quest_id": 2952,
+      "name": "The Sparklematic 5200!",
+      "map_id": 1426,
+      "minimum_level": 25,
+      "source_xp": 2450,
+      "requirements": "{\"reqLevel\":25,\"side\":\"B\"}",
+      "prerequisites": [
+        2951,
+        4601,
+        4602
+      ],
+      "chain_id": 2951,
+      "chain_size": 9,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": []
+    },
+    {
+      "quest_id": 2953,
+      "name": "More Sparklematic Action",
+      "map_id": 1426,
+      "minimum_level": 25,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":25,\"side\":\"B\"}",
+      "prerequisites": [
+        2952,
+        4605,
+        4606
+      ],
+      "chain_id": 2951,
+      "chain_size": 9,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": []
+    },
+    {
+      "quest_id": 2962,
+      "name": "The Only Cure is More Green Glow",
+      "map_id": 1426,
+      "minimum_level": 20,
+      "source_xp": 2450,
+      "requirements": "{\"reqLevel\":20,\"side\":\"A\"}",
+      "prerequisites": [
+        2926
+      ],
+      "chain_id": 2926,
+      "chain_size": 3,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Not only was your sample insufficient in quantity, it was also impure.\n\nWhat we require is more green glow. The troggs are obviously not irradiated sufficiently to fulfill our needs. You will have to go into Gnomeregan and bring back some radioactive fallout, straight from the tap. I am speaking of the irradiated slimes, lurkers and horrors. Be warned, the containment of this type of fallout is difficult. You may need to make several attempts with the phial until a suitable sampling is recovered.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 45.89,
+          "y": 49.39
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 45.89,
+          "y": 49.39
+        }
+      ]
+    },
+    {
+      "quest_id": 3361,
+      "name": "A Refugee's Quandary",
+      "map_id": 1426,
+      "minimum_level": 3,
+      "source_xp": 250,
+      "requirements": "{\"reqLevel\":3,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "We drove the troggs out of Gnomeregan, but then it all went so horribly wrong!  Now our home is completely irradiated, and we gnomes have been scattered all over Dun Morogh.\n\nIn my haste to get away from the radiation, I lost all my personal belongings and tools.  It was the trolls that got them.  They stole my chest, my box, and my bucket of bolts!  They took them back to their camps southwest of Anvilmar.\n\nI'm no adventurer - could you find my things and bring them here to me, please?",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 28.55,
+          "y": 67.64
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 28.55,
+          "y": 67.64
+        }
+      ]
+    },
+    {
+      "quest_id": 3364,
+      "name": "Scalding Mornbrew Delivery",
+      "map_id": 1426,
+      "minimum_level": 4,
+      "source_xp": 225,
+      "requirements": "{\"reqLevel\":4,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 3364,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Gah!  I was supposed to get this delicious scalding mornbrew to Durnan Furcutter inside Anvilmar a while ago now, but I had to deliver one to Grelin here first.  I'll never make it to Anvilmar before the brew runs cold!\n\nYou look fast.  Maybe you can make it.  This cup will only stay hot for five more minutes, and Durnan didn't order \"chilly\" mornbrew, so get going.  Anvilmar is to the northeast, a settlement dug into the mountain.\n\nThanks, $N, and don't forget to bring me back my mug!",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 24.98,
+          "y": 75.96
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 28.77,
+          "y": 66.37
+        }
+      ]
+    },
+    {
+      "quest_id": 3365,
+      "name": "Bring Back the Mug",
+      "map_id": 1426,
+      "minimum_level": 4,
+      "source_xp": 450,
+      "requirements": "{\"reqLevel\":4,\"side\":\"A\"}",
+      "prerequisites": [
+        3364
+      ],
+      "chain_id": 3364,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Now that hit the spot!  Nothing like a piping hot - nay, SCALDING mornbrew on a cold winter's day to warm your cackles of yer soul.\n\nHere ya go $N - be a pal and take this empty mug back to Nori for me, would ya now.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 28.77,
+          "y": 66.37
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 24.98,
+          "y": 75.96
+        }
+      ]
+    },
+    {
+      "quest_id": 4601,
+      "name": "The Sparklematic 5200!",
+      "map_id": 1426,
+      "minimum_level": 25,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":25,\"side\":\"B\"}",
+      "prerequisites": [],
+      "chain_id": 2951,
+      "chain_size": 9,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "This contraption stands out amongst the gnomes holding out against the madness outside the room.  A small plaque on the device reads \"The Sparklematic 5200\", followed by some text:\n\n\"Grime and residue ruining your sparklies?  The Sparklematic 5200 puts the shine back in shine-tastic!  Insert the item you wish to clean and deposit three silver coins in the coin slot.  Give the Sparklematic 5200 a moment for operation, and voila!  Your valuables will emerge clean and shiny!\"",
+      "locations": []
+    },
+    {
+      "quest_id": 4602,
+      "name": "The Sparklematic 5200!",
+      "map_id": 1426,
+      "minimum_level": 25,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":25,\"side\":\"B\"}",
+      "prerequisites": [],
+      "chain_id": 2951,
+      "chain_size": 9,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "This contraption stands out amongst the gnomes holding out against the madness outside the room.  A small plaque on the device reads \"The Sparklematic 5200\", followed by some text:\n\n\"Grime and residue ruining your sparklies?  The Sparklematic 5200 puts the shine back in shine-tastic!  Insert the item you wish to clean and deposit three silver coins in the coin slot.  Give the Sparklematic 5200 a moment for operation, and voila!  Your valuables will emerge clean and shiny!\"",
+      "locations": []
+    },
+    {
+      "quest_id": 4603,
+      "name": "More Sparklematic Action",
+      "map_id": 1426,
+      "minimum_level": 25,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":25,\"side\":\"B\"}",
+      "prerequisites": [
+        2952,
+        4605,
+        4606
+      ],
+      "chain_id": 2951,
+      "chain_size": 9,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": []
+    },
+    {
+      "quest_id": 4604,
+      "name": "More Sparklematic Action",
+      "map_id": 1426,
+      "minimum_level": 25,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":25,\"side\":\"B\"}",
+      "prerequisites": [
+        2955,
+        4605,
+        4606
+      ],
+      "chain_id": 2951,
+      "chain_size": 9,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": []
+    },
+    {
+      "quest_id": 4605,
+      "name": "The Sparklematic 5200!",
+      "map_id": 1426,
+      "minimum_level": 25,
+      "source_xp": 2450,
+      "requirements": "{\"reqLevel\":25,\"side\":\"B\"}",
+      "prerequisites": [
+        2951,
+        4601,
+        4602
+      ],
+      "chain_id": 2951,
+      "chain_size": 9,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": []
+    },
+    {
+      "quest_id": 4606,
+      "name": "The Sparklematic 5200!",
+      "map_id": 1426,
+      "minimum_level": 25,
+      "source_xp": 2450,
+      "requirements": "{\"reqLevel\":25,\"side\":\"B\"}",
+      "prerequisites": [
+        2951,
+        4601,
+        4602
+      ],
+      "chain_id": 2951,
+      "chain_size": 9,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": []
+    },
+    {
+      "quest_id": 5541,
+      "name": "Ammo for Rumbleshot",
+      "map_id": 1426,
+      "minimum_level": 5,
+      "source_xp": 540,
+      "requirements": "{\"reqLevel\":5,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Hegnar Rumbleshot sells guns off the road to Anvilmar.  Riflemen and mortar teams spend a lot of time practicing out near his shop, and he's always needing fresh ammunition.\n\nBut... the last crate of ammo I sent him got lost along the way.  My courier said he was camped near the Grizzled Den when wendigo chased him away... and the fool left Rumbleshot's ammo behind!\n\n$N, can you get that ammo and take it to Rumbleshot?  He's been waiting on it and I'm sure he's running low.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 50.08,
+          "y": 49.42
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 40.68,
+          "y": 65.13
+        }
+      ]
+    },
+    {
+      "quest_id": 5841,
+      "name": "Welcome!",
+      "map_id": 1426,
+      "minimum_level": 1,
+      "source_xp": null,
+      "requirements": "{\"races\":[\"Dwarf\",\"Gnome\"],\"reqLevel\":1,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Welcome to the World of Warcraft!\n\nAs special thanks for purchasing the World of Warcraft Collector's Edition, turn in this gift voucher to Yori Crackhelm in Coldridge Valley.  You'll then be given a gift: a little companion to join you on your quest for adventure and glory.\n\nThanks again, and enjoy your stay in the World of Warcraft!",
+      "locations": [
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 30.08,
+          "y": 71.67
+        }
+      ]
+    },
+    {
+      "quest_id": 6722,
+      "name": "The Hunter's Path",
+      "map_id": 1426,
+      "minimum_level": 10,
+      "source_xp": 85,
+      "requirements": "{\"classes\":[\"Hunter\"],\"races\":[\"Night Elf\"],\"reqLevel\":10,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 6063,
+      "chain_size": 9,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "Hello, young hunter. You look to me like you are skilled enough to handle a beast and train it as your companion.\n\nYou must see Dazalar in Dolanaar. He can put you on the path to earning a pet of your own.",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 45.81,
+          "y": 53.04
+        },
+        {
+          "role": "turnin",
+          "area_id": 141,
+          "x": 56.68,
+          "y": 59.49
+        }
+      ]
+    },
+    {
+      "quest_id": 7673,
+      "name": "Frost Ram Exchange",
+      "map_id": 1426,
+      "minimum_level": 60,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":60,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 63.47,
+          "y": 50.56
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 63.47,
+          "y": 50.56
+        }
+      ]
+    },
+    {
+      "quest_id": 7674,
+      "name": "Black Ram Exchange",
+      "map_id": 1426,
+      "minimum_level": 60,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":60,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 63.47,
+          "y": 50.56
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 63.47,
+          "y": 50.56
+        }
+      ]
+    },
+    {
+      "quest_id": 7675,
+      "name": "Icy Blue Mechanostrider Replacement",
+      "map_id": 1426,
+      "minimum_level": 60,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":60,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 49.13,
+          "y": 47.95
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 49.13,
+          "y": 47.95
+        }
+      ]
+    },
+    {
+      "quest_id": 7676,
+      "name": "White Mechanostrider Replacement",
+      "map_id": 1426,
+      "minimum_level": 60,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":60,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 49.13,
+          "y": 47.95
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 49.13,
+          "y": 47.95
+        }
+      ]
+    },
+    {
+      "quest_id": 95041,
+      "name": "Data Hoarders",
+      "map_id": 1426,
+      "minimum_level": 7,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":7,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1537,
+          "x": 67.66,
+          "y": 44.21
+        },
+        {
+          "role": "turnin",
+          "area_id": 1537,
+          "x": 67.66,
+          "y": 44.21
+        }
+      ]
+    },
+    {
+      "quest_id": 95212,
+      "name": "Never Saddle on Quality",
+      "map_id": 1426,
+      "minimum_level": 7,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":7,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 63.08,
+          "y": 49.85
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 63.08,
+          "y": 49.85
+        }
+      ]
+    },
+    {
+      "quest_id": 95213,
+      "name": "Stolen Blasting Powder",
+      "map_id": 1426,
+      "minimum_level": 7,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":7,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 95213,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 69.16,
+          "y": 54.8
+        }
+      ]
+    },
+    {
+      "quest_id": 95214,
+      "name": "Stolen Blasting Powder",
+      "map_id": 1426,
+      "minimum_level": 7,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":7,\"side\":\"A\"}",
+      "prerequisites": [
+        95213
+      ],
+      "chain_id": 95213,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 69.16,
+          "y": 54.8
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 69.16,
+          "y": 54.8
+        }
+      ]
+    },
+    {
+      "quest_id": 95217,
+      "name": "The Quarry's Smith",
+      "map_id": 1426,
+      "minimum_level": 7,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":7,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 69,
+          "y": 55.89
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 69,
+          "y": 55.89
+        }
+      ]
+    },
+    {
+      "quest_id": 96390,
+      "name": "Nip 'Em in the Bud",
+      "map_id": 1426,
+      "minimum_level": 9,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":9,\"side\":\"A\"}",
+      "prerequisites": [
+        96392
+      ],
+      "chain_id": 96390,
+      "chain_size": 3,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 64.87,
+          "y": 58.47
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 64.87,
+          "y": 58.47
+        }
+      ]
+    },
+    {
+      "quest_id": 96391,
+      "name": "Underground Map",
+      "map_id": 1426,
+      "minimum_level": 9,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":9,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 96391,
+      "chain_size": 2,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 64.87,
+          "y": 58.47
+        }
+      ]
+    },
+    {
+      "quest_id": 96392,
+      "name": "Farsen's Watch",
+      "map_id": 1426,
+      "minimum_level": 9,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":9,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 96390,
+      "chain_size": 3,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 64.87,
+          "y": 58.47
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 64.87,
+          "y": 58.47
+        }
+      ]
+    },
+    {
+      "quest_id": 96408,
+      "name": "A Visitor to Dun Morogh",
+      "map_id": 1426,
+      "minimum_level": 9,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":9,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 96390,
+      "chain_size": 3,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 50.44,
+          "y": 49.09
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 64.87,
+          "y": 58.47
+        }
+      ]
+    },
+    {
+      "quest_id": 97277,
+      "name": "Grund and Gozwin",
+      "map_id": 1426,
+      "minimum_level": 4,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":4,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 28.67,
+          "y": 67.52
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 28.67,
+          "y": 67.52
+        }
+      ]
+    },
+    {
+      "quest_id": 98319,
+      "name": "Secure the Mountain",
+      "map_id": 1426,
+      "minimum_level": 4,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":4,\"side\":\"A\"}",
+      "prerequisites": [
+        98322
+      ],
+      "chain_id": 287,
+      "chain_size": 5,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 44.1,
+          "y": 57.07
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 44.1,
+          "y": 57.07
+        }
+      ]
+    },
+    {
+      "quest_id": 98321,
+      "name": "Flintfire's Shipment",
+      "map_id": 1426,
+      "minimum_level": 4,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":4,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 45.34,
+          "y": 51.94
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 45.34,
+          "y": 51.94
+        }
+      ]
+    },
+    {
+      "quest_id": 98322,
+      "name": "Secure the Mountain",
+      "map_id": 1426,
+      "minimum_level": 4,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":4,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 287,
+      "chain_size": 5,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 46.73,
+          "y": 53.83
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 44.1,
+          "y": 57.07
+        }
+      ]
+    },
+    {
+      "quest_id": 98323,
+      "name": "Secure the Mountain",
+      "map_id": 1426,
+      "minimum_level": 4,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":4,\"side\":\"A\"}",
+      "prerequisites": [
+        98319
+      ],
+      "chain_id": 287,
+      "chain_size": 5,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 44.1,
+          "y": 57.07
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 46.73,
+          "y": 53.83
+        }
+      ]
+    },
+    {
+      "quest_id": 98326,
+      "name": "Frosthowl",
+      "map_id": 1426,
+      "minimum_level": 5,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":5,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 31.53,
+          "y": 44.65
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 31.53,
+          "y": 44.65
+        }
+      ]
+    },
+    {
+      "quest_id": 98423,
+      "name": "The Treaty of Understanding",
+      "map_id": 1426,
+      "minimum_level": 9,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":9,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": null,
+      "chain_size": null,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "turnin",
+          "area_id": 1537,
+          "x": 39.09,
+          "y": 56.2
+        }
+      ]
+    },
+    {
+      "quest_id": 99158,
+      "name": "Dawn in the Mountains",
+      "map_id": 1426,
+      "minimum_level": 5,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":5,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 99158,
+      "chain_size": 5,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 47.34,
+          "y": 52.19
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 57.73,
+          "y": 44.88
+        }
+      ]
+    },
+    {
+      "quest_id": 99159,
+      "name": "Finding Warmth",
+      "map_id": 1426,
+      "minimum_level": 5,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":5,\"side\":\"A\"}",
+      "prerequisites": [],
+      "chain_id": 99158,
+      "chain_size": 5,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 57.73,
+          "y": 44.88
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 57.73,
+          "y": 44.88
+        }
+      ]
+    },
+    {
+      "quest_id": 99160,
+      "name": "Rime's Wrath",
+      "map_id": 1426,
+      "minimum_level": 5,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":5,\"side\":\"A\"}",
+      "prerequisites": [
+        99159
+      ],
+      "chain_id": 99158,
+      "chain_size": 5,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 57.73,
+          "y": 44.88
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 57.73,
+          "y": 44.88
+        }
+      ]
+    },
+    {
+      "quest_id": 99161,
+      "name": "Rime's Wrath",
+      "map_id": 1426,
+      "minimum_level": 5,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":5,\"side\":\"A\"}",
+      "prerequisites": [
+        99160
+      ],
+      "chain_id": 99158,
+      "chain_size": 5,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 57.73,
+          "y": 44.88
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 57.73,
+          "y": 44.88
+        }
+      ]
+    },
+    {
+      "quest_id": 99162,
+      "name": "Treacherous Cold",
+      "map_id": 1426,
+      "minimum_level": 5,
+      "source_xp": null,
+      "requirements": "{\"reqLevel\":5,\"side\":\"A\"}",
+      "prerequisites": [
+        99159
+      ],
+      "chain_id": 99158,
+      "chain_size": 5,
+      "story_importance": "unreviewed",
+      "lore_excerpt": "",
+      "locations": [
+        {
+          "role": "pickup",
+          "area_id": 1,
+          "x": 57.73,
+          "y": 44.88
+        },
+        {
+          "role": "turnin",
+          "area_id": 1,
+          "x": 57.73,
+          "y": 44.88
+        }
+      ]
+    }
+  ]
+}

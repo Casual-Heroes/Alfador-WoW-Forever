@@ -1,0 +1,326 @@
+{
+  "schema": "alfador.wowf.zone-probe.evidence.draft1",
+  "evidenceClass": "local-only-not-core-delivered",
+  "samples": [
+    {
+      "capturedAtUnix": {
+        "status": "observed",
+        "value": 1795000000
+      },
+      "boundary": "093c975edb2db8401522f7100689992a",
+      "sequence": 1,
+      "buildCheck": "matched-at-sample",
+      "observedClient": {
+        "interface": {
+          "status": "observed",
+          "value": 16001
+        },
+        "version": {
+          "status": "observed",
+          "value": "1.60.1"
+        },
+        "build": {
+          "status": "observed",
+          "value": "70959"
+        }
+      },
+      "reason": "startup-awaiting-world-event",
+      "state": "unavailable",
+      "fields": {
+        "zoneName": {
+          "status": "unavailable"
+        },
+        "inWorld": {
+          "status": "unavailable"
+        },
+        "mapId": {
+          "status": "unavailable"
+        },
+        "level": {
+          "status": "unavailable"
+        }
+      },
+      "sampling": "sequential-nonatomic-before-after-guards",
+      "sampleEndUnix": {
+        "status": "observed",
+        "value": 1795000000
+      },
+      "expectedClient": {
+        "interface": 16001,
+        "version": "1.60.1",
+        "build": "70959"
+      },
+      "game": "wow-forever",
+      "schema": "alfador.wowf.zone-probe.sample.draft1",
+      "transport": "local-copy-only-not-live-desktop"
+    },
+    {
+      "capturedAtUnix": {
+        "status": "observed",
+        "value": 1795000000
+      },
+      "boundary": "7509cc84ebfe8273d3cdff9644d061a0",
+      "sequence": 2,
+      "buildCheck": "matched-at-sample",
+      "observedClient": {
+        "interface": {
+          "status": "observed",
+          "value": 16001
+        },
+        "version": {
+          "status": "observed",
+          "value": "1.60.1"
+        },
+        "build": {
+          "status": "observed",
+          "value": "70959"
+        }
+      },
+      "reason": "entering-world-awaiting-read",
+      "state": "unavailable",
+      "fields": {
+        "zoneName": {
+          "status": "unavailable"
+        },
+        "inWorld": {
+          "status": "unavailable"
+        },
+        "mapId": {
+          "status": "unavailable"
+        },
+        "level": {
+          "status": "unavailable"
+        }
+      },
+      "sampling": "sequential-nonatomic-before-after-guards",
+      "sampleEndUnix": {
+        "status": "observed",
+        "value": 1795000000
+      },
+      "expectedClient": {
+        "interface": 16001,
+        "version": "1.60.1",
+        "build": "70959"
+      },
+      "game": "wow-forever",
+      "schema": "alfador.wowf.zone-probe.sample.draft1",
+      "transport": "local-copy-only-not-live-desktop"
+    },
+    {
+      "capturedAtUnix": {
+        "status": "observed",
+        "value": 1795000000
+      },
+      "boundary": "7509cc84ebfe8273d3cdff9644d061a0",
+      "sequence": 3,
+      "buildCheck": "matched-at-sample",
+      "observedClient": {
+        "interface": {
+          "status": "observed",
+          "value": 16001
+        },
+        "version": {
+          "status": "observed",
+          "value": "1.60.1"
+        },
+        "build": {
+          "status": "observed",
+          "value": "70959"
+        }
+      },
+      "reason": "sampled",
+      "state": "in_world",
+      "fields": {
+        "zoneName": {
+          "status": "observed",
+          "value": "Synthetic zone"
+        },
+        "inWorld": {
+          "status": "observed",
+          "value": true
+        },
+        "mapId": {
+          "status": "observed",
+          "value": 10
+        },
+        "level": {
+          "status": "observed",
+          "value": 10
+        }
+      },
+      "sampling": "sequential-nonatomic-before-after-guards",
+      "sampleEndUnix": {
+        "status": "observed",
+        "value": 1795000000
+      },
+      "expectedClient": {
+        "interface": 16001,
+        "version": "1.60.1",
+        "build": "70959"
+      },
+      "game": "wow-forever",
+      "schema": "alfador.wowf.zone-probe.sample.draft1",
+      "transport": "local-copy-only-not-live-desktop"
+    },
+    {
+      "capturedAtUnix": {
+        "status": "observed",
+        "value": 1795000000
+      },
+      "boundary": "7509cc84ebfe8273d3cdff9644d061a0",
+      "sequence": 4,
+      "buildCheck": "matched-at-sample",
+      "observedClient": {
+        "interface": {
+          "status": "observed",
+          "value": 16001
+        },
+        "version": {
+          "status": "observed",
+          "value": "1.60.1"
+        },
+        "build": {
+          "status": "observed",
+          "value": "70959"
+        }
+      },
+      "reason": "zone-transition-awaiting-read",
+      "state": "unavailable",
+      "fields": {
+        "zoneName": {
+          "status": "unavailable"
+        },
+        "inWorld": {
+          "status": "unavailable"
+        },
+        "mapId": {
+          "status": "unavailable"
+        },
+        "level": {
+          "status": "unavailable"
+        }
+      },
+      "sampling": "sequential-nonatomic-before-after-guards",
+      "sampleEndUnix": {
+        "status": "observed",
+        "value": 1795000000
+      },
+      "expectedClient": {
+        "interface": 16001,
+        "version": "1.60.1",
+        "build": "70959"
+      },
+      "game": "wow-forever",
+      "schema": "alfador.wowf.zone-probe.sample.draft1",
+      "transport": "local-copy-only-not-live-desktop"
+    },
+    {
+      "capturedAtUnix": {
+        "status": "observed",
+        "value": 1795000000
+      },
+      "boundary": "7509cc84ebfe8273d3cdff9644d061a0",
+      "sequence": 5,
+      "buildCheck": "matched-at-sample",
+      "observedClient": {
+        "interface": {
+          "status": "observed",
+          "value": 16001
+        },
+        "version": {
+          "status": "observed",
+          "value": "1.60.1"
+        },
+        "build": {
+          "status": "observed",
+          "value": "70959"
+        }
+      },
+      "reason": "sampled",
+      "state": "in_world",
+      "fields": {
+        "zoneName": {
+          "status": "observed",
+          "value": "Second synthetic zone"
+        },
+        "inWorld": {
+          "status": "observed",
+          "value": true
+        },
+        "mapId": {
+          "status": "observed",
+          "value": 20
+        },
+        "level": {
+          "status": "observed",
+          "value": 10
+        }
+      },
+      "sampling": "sequential-nonatomic-before-after-guards",
+      "sampleEndUnix": {
+        "status": "observed",
+        "value": 1795000000
+      },
+      "expectedClient": {
+        "interface": 16001,
+        "version": "1.60.1",
+        "build": "70959"
+      },
+      "game": "wow-forever",
+      "schema": "alfador.wowf.zone-probe.sample.draft1",
+      "transport": "local-copy-only-not-live-desktop"
+    },
+    {
+      "capturedAtUnix": {
+        "status": "observed",
+        "value": 1795000000
+      },
+      "boundary": "7509cc84ebfe8273d3cdff9644d061a0",
+      "sequence": 6,
+      "buildCheck": "matched-at-sample",
+      "observedClient": {
+        "interface": {
+          "status": "observed",
+          "value": 16001
+        },
+        "version": {
+          "status": "observed",
+          "value": "1.60.1"
+        },
+        "build": {
+          "status": "observed",
+          "value": "70959"
+        }
+      },
+      "reason": "logout",
+      "state": "unavailable",
+      "fields": {
+        "zoneName": {
+          "status": "unavailable"
+        },
+        "inWorld": {
+          "status": "unavailable"
+        },
+        "mapId": {
+          "status": "unavailable"
+        },
+        "level": {
+          "status": "unavailable"
+        }
+      },
+      "sampling": "sequential-nonatomic-before-after-guards",
+      "sampleEndUnix": {
+        "status": "observed",
+        "value": 1795000000
+      },
+      "expectedClient": {
+        "interface": 16001,
+        "version": "1.60.1",
+        "build": "70959"
+      },
+      "game": "wow-forever",
+      "schema": "alfador.wowf.zone-probe.sample.draft1",
+      "transport": "local-copy-only-not-live-desktop"
+    }
+  ]
+}

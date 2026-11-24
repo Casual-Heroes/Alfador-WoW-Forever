@@ -1,0 +1,934 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Quest pilot draft4 with game-observed quest titles",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "game",
+    "source",
+    "freshness",
+    "localCaptureSerial",
+    "capturedAtUnix",
+    "build",
+    "player",
+    "zone",
+    "candidateBasis",
+    "unresolvedLogEntries",
+    "quests",
+    "limitations",
+    "selectedQuestAtCapture"
+  ],
+  "properties": {
+    "schema": {
+      "const": "alfador.wow.forever.quest-pilot.capture.draft4"
+    },
+    "game": {
+      "const": "wow-forever"
+    },
+    "source": {
+      "const": "wow-addon-api"
+    },
+    "freshness": {
+      "const": "historical"
+    },
+    "localCaptureSerial": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "capturedAtUnix": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value"
+          ],
+          "properties": {
+            "status": {
+              "const": "observed"
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "secret-check-unavailable",
+                "restricted",
+                "value-limit",
+                "invalid",
+                "unavailable",
+                "api-unavailable",
+                "call-failed"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "build": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "number",
+        "interface"
+      ],
+      "properties": {
+        "version": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "value"
+              ],
+              "properties": {
+                "status": {
+                  "const": "observed"
+                },
+                "value": {
+                  "type": "string",
+                  "maxLength": 1024
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "enum": [
+                    "secret-check-unavailable",
+                    "restricted",
+                    "value-limit",
+                    "invalid",
+                    "unavailable",
+                    "api-unavailable",
+                    "call-failed"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "number": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "value"
+              ],
+              "properties": {
+                "status": {
+                  "const": "observed"
+                },
+                "value": {
+                  "type": "string",
+                  "maxLength": 1024
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "enum": [
+                    "secret-check-unavailable",
+                    "restricted",
+                    "value-limit",
+                    "invalid",
+                    "unavailable",
+                    "api-unavailable",
+                    "call-failed"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "interface": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "value"
+              ],
+              "properties": {
+                "status": {
+                  "const": "observed"
+                },
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "enum": [
+                    "secret-check-unavailable",
+                    "restricted",
+                    "value-limit",
+                    "invalid",
+                    "unavailable",
+                    "api-unavailable",
+                    "call-failed"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "player": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "guid",
+        "name",
+        "level"
+      ],
+      "properties": {
+        "guid": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "value"
+              ],
+              "properties": {
+                "status": {
+                  "const": "observed"
+                },
+                "value": {
+                  "type": "string",
+                  "maxLength": 1024
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "enum": [
+                    "secret-check-unavailable",
+                    "restricted",
+                    "value-limit",
+                    "invalid",
+                    "unavailable",
+                    "api-unavailable",
+                    "call-failed"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "name": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "value"
+              ],
+              "properties": {
+                "status": {
+                  "const": "observed"
+                },
+                "value": {
+                  "type": "string",
+                  "maxLength": 1024
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "enum": [
+                    "secret-check-unavailable",
+                    "restricted",
+                    "value-limit",
+                    "invalid",
+                    "unavailable",
+                    "api-unavailable",
+                    "call-failed"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "level": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "value"
+              ],
+              "properties": {
+                "status": {
+                  "const": "observed"
+                },
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "enum": [
+                    "secret-check-unavailable",
+                    "restricted",
+                    "value-limit",
+                    "invalid",
+                    "unavailable",
+                    "api-unavailable",
+                    "call-failed"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "zone": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mapId",
+        "name"
+      ],
+      "properties": {
+        "mapId": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "value"
+              ],
+              "properties": {
+                "status": {
+                  "const": "observed"
+                },
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "enum": [
+                    "secret-check-unavailable",
+                    "restricted",
+                    "value-limit",
+                    "invalid",
+                    "unavailable",
+                    "api-unavailable",
+                    "call-failed"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "name": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "value"
+              ],
+              "properties": {
+                "status": {
+                  "const": "observed"
+                },
+                "value": {
+                  "type": "string",
+                  "maxLength": 1024
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "enum": [
+                    "secret-check-unavailable",
+                    "restricted",
+                    "value-limit",
+                    "invalid",
+                    "unavailable",
+                    "api-unavailable",
+                    "call-failed"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "candidateBasis": {
+      "const": "quest-log-IsOnMap-at-capture-not-verified-zone-membership"
+    },
+    "unresolvedLogEntries": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 200
+    },
+    "quests": {
+      "type": "array",
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "questId",
+          "onMap",
+          "onQuest",
+          "turnedIn",
+          "objectivesComplete",
+          "displayLevel",
+          "rewardXP",
+          "timing",
+          "rewardXPContext",
+          "rewardXPRead",
+          "title"
+        ],
+        "properties": {
+          "questId": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "value"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "observed"
+                  },
+                  "value": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "secret-check-unavailable",
+                      "restricted",
+                      "value-limit",
+                      "invalid",
+                      "unavailable",
+                      "api-unavailable",
+                      "call-failed"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "onMap": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "value"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "observed"
+                  },
+                  "value": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "secret-check-unavailable",
+                      "restricted",
+                      "value-limit",
+                      "invalid",
+                      "unavailable",
+                      "api-unavailable",
+                      "call-failed"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "onQuest": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "value"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "observed"
+                  },
+                  "value": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "secret-check-unavailable",
+                      "restricted",
+                      "value-limit",
+                      "invalid",
+                      "unavailable",
+                      "api-unavailable",
+                      "call-failed"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "turnedIn": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "value"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "observed"
+                  },
+                  "value": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "secret-check-unavailable",
+                      "restricted",
+                      "value-limit",
+                      "invalid",
+                      "unavailable",
+                      "api-unavailable",
+                      "call-failed"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "objectivesComplete": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "value"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "observed"
+                  },
+                  "value": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "secret-check-unavailable",
+                      "restricted",
+                      "value-limit",
+                      "invalid",
+                      "unavailable",
+                      "api-unavailable",
+                      "call-failed"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "displayLevel": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "value"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "observed"
+                  },
+                  "value": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "secret-check-unavailable",
+                      "restricted",
+                      "value-limit",
+                      "invalid",
+                      "unavailable",
+                      "api-unavailable",
+                      "call-failed"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "rewardXP": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "value"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "observed"
+                  },
+                  "value": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000000000
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "secret-check-unavailable",
+                      "restricted",
+                      "value-limit",
+                      "invalid",
+                      "unavailable",
+                      "api-unavailable",
+                      "call-failed"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "timing": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "status"
+            ],
+            "properties": {
+              "status": {
+                "const": "unavailable"
+              }
+            }
+          },
+          "rewardXPContext": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "unavailable"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "value"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "observed"
+                  },
+                  "value": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "api",
+                      "binding",
+                      "questId",
+                      "playerLevel",
+                      "capturedAtUnix"
+                    ],
+                    "properties": {
+                      "api": {
+                        "const": "GetQuestLogRewardXP"
+                      },
+                      "binding": {
+                        "const": "selected-quest-before-and-after"
+                      },
+                      "questId": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "playerLevel": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "capturedAtUnix": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "rewardXPRead": {
+            "enum": [
+              "player-context-unavailable",
+              "selection-unavailable",
+              "not-selected-quest",
+              "selection-or-player-changed",
+              "reward-display-check-unavailable",
+              "rewards-not-shown",
+              "xp-api-unavailable",
+              "xp-call-failed",
+              "xp-restricted",
+              "xp-unavailable",
+              "xp-invalid",
+              "observed"
+            ]
+          },
+          "title": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "value"
+                ],
+                "properties": {
+                  "status": {
+                    "const": "observed"
+                  },
+                  "value": {
+                    "type": "string",
+                    "maxLength": 1024
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "secret-check-unavailable",
+                      "restricted",
+                      "value-limit",
+                      "invalid",
+                      "unavailable",
+                      "api-unavailable",
+                      "call-failed"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "maxLength": 1024
+      }
+    },
+    "selectedQuestAtCapture": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "value"
+          ],
+          "properties": {
+            "status": {
+              "const": "observed"
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "secret-check-unavailable",
+                "restricted",
+                "value-limit",
+                "invalid",
+                "unavailable",
+                "api-unavailable",
+                "call-failed"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

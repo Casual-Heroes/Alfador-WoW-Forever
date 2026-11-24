@@ -1,0 +1,10 @@
+## Interface: 16001
+## Title: Alfador-wow
+## Notes: Local quest journal guidance and historical quest evidence.
+## Author: Alfador
+## Version: 0.0.22
+## SavedVariables: AlfadorWowDisplay
+
+QuestCatalog.lua
+QuestGuide.lua
+Alfador.lua
